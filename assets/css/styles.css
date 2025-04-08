@@ -1,0 +1,233 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  height: 100vh;
+  background: linear-gradient(to bottom, #555654 0%, #7a7c79 12.5%, #7a7c79 87.5%, #555654 100%);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* TOP LINKS */
+.top-links {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  gap: 30px; /* Increased gap between top links */
+  justify-content: center;
+  width: 100%;
+}
+
+.top-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #222;
+  transition: color 0.3s ease;
+  font-weight: 300;
+}
+
+.top-links a:hover {
+  color: #555;
+}
+
+/* MAIN TITLE CONTAINER */
+.main-title-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-title-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 30px; /* Increased gap between "GUSTAF" and "ENEBOG" */
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  width: clamp(90%, 33vw, 100%);
+}
+
+.main-title {
+  font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.sub-title {
+  font-size: clamp(3.5rem, 6vw + 1rem, 6.75rem);
+  font-weight: 900;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+/* BOTTOM LINKS */
+.bottom-links {
+  position: absolute;
+  bottom: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px; /* Increased gap between links for all screen sizes */
+  justify-content: center;
+  width: 100%;
+  max-width: 90vw;
+  text-align: center;
+}
+
+/* BOTTOM LINKS */
+.bottom-links a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  opacity: 0;
+  transition: opacity 2s ease, color 0.3s ease;
+  white-space: nowrap;
+  font-weight: 300; /* Add this line to match the font weight of top links */
+}
+
+.bottom-links a.show {
+  opacity: 1;
+}
+
+.bottom-links a:hover:nth-child(1) { color: #c849a7; }
+.bottom-links a:hover:nth-child(2) { color: #ffa300; }
+.bottom-links a:hover:nth-child(3) { color: #00f3fe; }
+
+
+
+
+/* Media Query for smaller screens between 768px and 800px */
+@media (min-width: 768px) and (max-width: 800px) {
+  .bottom-links {
+    position: absolute;
+    top: 75%;  /* Adjust to center vertically at 75% from the top of the viewport */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%); /* Adjust vertically to ensure it's centered */
+  }
+
+  .bottom-links a {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+/* Media Query for smaller screens */
+@media (max-width: 767px) {
+  /* Top links should still stay at the same position */
+  .top-links {
+    top: 25%;
+  }
+
+  /* Main title section */
+  .main-title-wrapper {
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .main-title-container {
+    width: 95vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px; /* Increased gap between "GUSTAF" and "ENEBOG" */
+  }
+
+  .main-title {
+    font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
+  }
+
+  .sub-title {
+    font-size: clamp(3.5rem, 6vw + 1rem, 6.75rem);
+  }
+
+  /* Bottom links: Adjust vertical positioning and alignment */
+  .bottom-links {
+    position: absolute;
+    bottom: 20%;  /* Adjusted to ensure they stay lower but not interfere */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    gap: 20px;  /* Increased gap between stacked links */
+  }
+
+  /* Adjusting the flex behavior for the stacked links */
+  .bottom-links a {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+  }
+
+  .bottom-links div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Increased space between links when not stacked */
+  }
+
+  .bottom-links a {
+    white-space: nowrap;
+  }
+}
+
+/* Media Query for larger screens (above 768px) */
+@media (min-width: 768px) {
+  /* Ensuring the bottom links are in one row and centered vertically at 75% */
+  .bottom-links {
+    position: absolute;
+    bottom: 25%;  /* Positioning the bottom links at 75% */
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .bottom-links a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Smaller screen styling */
+@media (max-width: 420px) {
+  .main-title-container {
+    flex-direction: column;
+    gap: 0;
+    justify-content: center; /* Ensures the items are centered vertically within the container */
+    align-items: center; /* Ensures the items are centered horizontally */
+  }
+}
+
+@media (max-width: 270px) {
+  .bottom-links {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: break-word; /* Ensures the words break to fit the screen */
+  }
+
+  .bottom-links a {
+    white-space: normal; /* Allow the links to break into multiple lines if needed */
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustaf Enebog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Top links (GitHub & LinkedIn) -->
+    <div class="top-links">
+        <a href="https://github.com/GustafEnebog?tab=repositories" target="_blank">GitHub</a>
+        <a href="http://www.linkedin.com/in/gustaf-enebog/" target="_blank">LinkedIn</a>
+    </div>
+
+    <!-- Main title (GUSTAF ENEBOG) -->
+    <div class="main-title-container">
+        <div class="main-title">GUSTAF</div>
+        <div class="sub-title">ENEBOG</div>
+    </div>
+
+    <!-- Bottom links (subpages) -->
+    <div class="bottom-links">
+        <a href="subpages/fullstack.html" class="show">Full-stack Software Developer</a>
+        <a href="subpages/ml.html" class="show">Machine Learning Engineer</a>
+        <a href="subpages/aero.html" class="show">Aeronautical Engineer</a>
+    </div>
+
+    <script>
+        // Add class to make bottom links fade in after 2 seconds
+        setTimeout(() => {
+            document.querySelectorAll('.bottom-links a').forEach(link => {
+                link.classList.add('show');
+            });
+        }, 2000);
+    </script>
+
+</body>
+</html>
