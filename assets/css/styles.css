@@ -1,4 +1,4 @@
-/* styles.css */
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -33,15 +33,15 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   color: #222;
-  transition: color 0.3s ease;
   font-weight: 300;
+  transition: color 0.3s ease;
 }
 
 .top-links a:hover {
   color: #555;
 }
 
-/* MAIN TITLE CONTAINER */
+/* MAIN TITLE */
 .main-title-wrapper {
   flex-grow: 1;
   display: flex;
@@ -52,7 +52,7 @@ body {
 
 .main-title-container {
   display: flex;
-  align-items: flex-end; /* Align both texts to the bottom edge */
+  align-items: flex-end;
   justify-content: center;
   gap: 1.3em;
   flex-wrap: nowrap;
@@ -65,18 +65,15 @@ body {
   font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
   font-weight: 400;
   line-height: 1;
-  display: inline-block;
-  vertical-align: baseline;
   position: relative;
-  top: -0.07em; /* ✅ adjust this value until it aligns visually */
+  top: -0.07em; /* Fine-tuned alignment */
 }
 
 .sub-title {
   font-size: clamp(3.5rem, 6vw + 1rem, 6.75rem);
   font-weight: 900;
   line-height: 1;
-  display: inline-block;
-  vertical-align: baseline; /* Ensure it aligns to the baseline */
+  vertical-align: baseline;
 }
 
 /* BOTTOM LINKS */
@@ -85,22 +82,24 @@ body {
   bottom: 25%;
   display: flex;
   flex-wrap: wrap;
-  gap: 7vw; /* gap: 30px 40px; Increased gap between links for all screen sizes */
   justify-content: center;
+  gap: 2vw;
+  row-gap: 0.4em;
   width: 100%;
   max-width: 90vw;
   text-align: center;
 }
 
-/* BOTTOM LINKS */
 .bottom-links a {
   font-size: 1.2rem;
   text-decoration: none;
   color: #000;
   opacity: 0;
-  transition: opacity 2s ease, color 0.3s ease;
   white-space: nowrap;
-  font-weight: 300; /* Add this line to match the font weight of top links */
+  font-weight: 300;
+  transition: opacity 2s ease, color 0.3s ease;
+  min-width: 6rem;
+  text-align: center;
 }
 
 .bottom-links a.show {
@@ -111,45 +110,8 @@ body {
 .bottom-links a:hover:nth-child(2) { color: #ffa300; }
 .bottom-links a:hover:nth-child(3) { color: #00f3fe; }
 
-
-
-
-/* Media Query for smaller screens between 768px and 800px */
-@media (min-width: 768px) and (max-width: 800px) {
-  .bottom-links {
-    position: absolute;
-    top: 75%;  /* Adjust to center vertically at 75% from the top of the viewport */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    transform: translateY(-50%); /* Adjust vertically to ensure it's centered */
-  }
-
-  .bottom-links a {
-    font-size: 1.2rem;
-  }
-}
-
-
-
-
-
-/* Media Query for smaller screens */
+/* Responsive: up to 767px */
 @media (max-width: 767px) {
-  /* Top links should still stay at the same position */
-  .top-links {
-    top: 25%;
-  }
-
-  /* Main title section */
-  .main-title-wrapper {
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-  }
-
   .main-title-container {
     width: 95vw;
     flex-direction: row;
@@ -165,69 +127,33 @@ body {
     font-size: clamp(3.5rem, 6vw + 1rem, 6.75rem);
   }
 
-  /* Bottom links: Adjust vertical positioning and alignment */
   .bottom-links {
-    position: absolute;
-    bottom: 20%;  /* Adjusted to ensure they stay lower but not interfere */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    display: flex;
+    bottom: 20%;
+    gap: 4vw;
+    row-gap: 0.4em;
   }
 
-  /* Adjusting the flex behavior for the stacked links */
   .bottom-links a {
     font-size: clamp(0.9rem, 4vw, 1.2rem);
   }
-
-  .bottom-links div {
-    display: flex;
-    justify-content: center;
-  }
-
-  .bottom-links a {
-    white-space: nowrap;
-  }
 }
 
-/* Media Query for larger screens (above 768px) */
-@media (min-width: 768px) {
-  /* Ensuring the bottom links are in one row and centered vertically at 75% */
-  .bottom-links {
-    position: absolute;
-    bottom: 25%;  /* Positioning the bottom links at 75% */
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-  }
-
-  .bottom-links a {
-    font-size: 1.2rem;
-  }
-}
-
-/* Smaller screen styling */
+/* Narrow screen: stacked titles */
 @media (max-width: 420px) {
   .main-title-container {
     flex-direction: column;
     gap: 0;
-    justify-content: center; /* Ensures the items are centered vertically within the container */
-    align-items: center; /* Ensures the items are centered horizontally */
+    align-items: center;
   }
 }
 
+/* Tiny screens: prevent overflow */
 @media (max-width: 270px) {
   .bottom-links {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    overflow-wrap: break-word; /* Ensures the words break to fit the screen */
+    overflow-wrap: break-word;
   }
 
   .bottom-links a {
-    white-space: normal; /* Allow the links to break into multiple lines if needed */
+    white-space: normal;
   }
 }
