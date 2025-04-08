@@ -66,7 +66,9 @@ body {
   font-weight: 400;
   line-height: 1;
   display: inline-block;
-  vertical-align: baseline; /* Ensure it aligns to the baseline */
+  vertical-align: baseline;
+  position: relative;
+  top: -0.07em; /* ✅ adjust this value until it aligns visually */
 }
 
 .sub-title {
