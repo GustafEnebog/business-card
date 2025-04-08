@@ -24,7 +24,7 @@ body {
   position: absolute;
   top: 25%;
   display: flex;
-  gap: 30px; /* Increased gap between top links */
+  gap: 4vw;
   justify-content: center;
   width: 100%;
 }
@@ -52,12 +52,13 @@ body {
 
 .main-title-container {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-end; /* Align both texts to the bottom edge */
   justify-content: center;
-  gap: 30px; /* Increased gap between "GUSTAF" and "ENEBOG" */
+  gap: 1.3em;
   flex-wrap: nowrap;
   white-space: nowrap;
   width: clamp(90%, 33vw, 100%);
+  text-align: center;
 }
 
 .main-title {
@@ -65,7 +66,7 @@ body {
   font-weight: 400;
   line-height: 1;
   display: inline-block;
-  vertical-align: text-bottom;
+  vertical-align: baseline; /* Ensure it aligns to the baseline */
 }
 
 .sub-title {
@@ -73,7 +74,7 @@ body {
   font-weight: 900;
   line-height: 1;
   display: inline-block;
-  vertical-align: text-bottom;
+  vertical-align: baseline; /* Ensure it aligns to the baseline */
 }
 
 /* BOTTOM LINKS */
@@ -82,7 +83,7 @@ body {
   bottom: 25%;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 30px; /* Increased gap between links for all screen sizes */
+  gap: 7vw; /* gap: 30px 40px; Increased gap between links for all screen sizes */
   justify-content: center;
   width: 100%;
   max-width: 90vw;
@@ -152,7 +153,6 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 30px; /* Increased gap between "GUSTAF" and "ENEBOG" */
   }
 
   .main-title {
@@ -173,7 +173,6 @@ body {
     width: 100%;
     text-align: center;
     display: flex;
-    gap: 20px;  /* Increased gap between stacked links */
   }
 
   /* Adjusting the flex behavior for the stacked links */
@@ -184,7 +183,6 @@ body {
   .bottom-links div {
     display: flex;
     justify-content: center;
-    gap: 20px;  /* Increased space between links when not stacked */
   }
 
   .bottom-links a {
