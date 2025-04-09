@@ -22,7 +22,7 @@ body {
 /* TOP LINKS */
 .top-links {
   position: absolute;
-  top: 25%;
+  top: 25%;  /* Keep top links at 25% from the top */
   display: flex;
   gap: 4vw;
   justify-content: center;
@@ -64,8 +64,6 @@ body {
   font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
   font-weight: 400;
   line-height: 1;
-  position: relative;
-  top: -0.07em;
 }
 
 .sub-title {
@@ -74,18 +72,19 @@ body {
   line-height: 1;
 }
 
-/* BOTTOM LINKS - default (horizontal) */
+/* BOTTOM LINKS */
 .bottom-links {
   position: absolute;
   bottom: 25%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;         /* Default: single row */
   justify-content: center;
   column-gap: 7vw;
   row-gap: 1em;
   width: 100%;
   max-width: 90vw;
   text-align: center;
+  transition: top 0.3s ease;
 }
 
 .bottom-links a {
@@ -106,25 +105,77 @@ body {
 .bottom-links a:hover:nth-child(2) { color: #ffa300; }
 .bottom-links a:hover:nth-child(3) { color: #00f3fe; }
 
-/* STACKED VERSION — triggers BEFORE overflow */
+/* MEDIA QUERIES */
 
-@media (max-width: 768px) {
+/* ✅ Medium screens: 890px to 855px — Allow wrap to create a two-row layout */
+@media (max-width: 890px) and (min-width: 855px) {
   .bottom-links {
-    top: 75%;
-    bottom: auto;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(-50%);
-    gap: 1em;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 5vw;
+    row-gap: 0.8em;
   }
 }
 
-/* Very narrow screen layout: stacked title too */
+/* ✅ Mid-size screens: 854px to 770px — Flex stays wrapped with 2 rows */
+@media (max-width: 854px) and (min-width: 770px) {
+  .bottom-links {
+    flex-wrap: wrap; /* Keep as two rows */
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 5vw;
+    row-gap: 0.8em;
+  }
+}
+
+/* ✅ Small screens: 769px and below — Stack bottom-links vertically */
+@media (max-width: 769px) {
+  .bottom-links {
+    flex-wrap: wrap; /* Keep wrapped for smaller sizes */
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 5vw;
+    row-gap: 0.8em;
+  }
+}
+
+/* ✅ Small screens: 576px and below — stack bottom-links vertically */
+@media (max-width: 576px) {
+  .top-links {
+    top: 15%;
+  }
+
+  .main-title-wrapper {
+    margin-top: -20vh;
+  }
+
+  .main-title-container {
+    margin-top: -20vh;
+  }
+
+  .bottom-links {
+    top: 60%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+}
+
+/* ✅ Extra small screens: 420px and below — vertical title stack */
 @media (max-width: 420px) {
   .main-title-container {
     flex-direction: column;
     gap: 0;
     align-items: center;
+  }
+
+  .top-links {
+    top: 15%;
+  }
+
+  .bottom-links {
+    top: 60%;
   }
 }
