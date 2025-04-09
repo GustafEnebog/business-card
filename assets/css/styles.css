@@ -179,3 +179,19 @@ body {
     top: 60%;
   }
 }
+
+/* EXTRA EXTRA SMALL SCREENS: 290px and below — adjust layout and font size */
+@media (max-width: 290px) {
+  .bottom-links {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3vw; /* Reduced gap for very small screens */
+    row-gap: 0.8em;
+  }
+
+  .bottom-links a {
+    font-size: 0.9rem; /* Smaller font size for small screens */
+  }
+}
