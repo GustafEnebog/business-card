@@ -22,7 +22,7 @@ body {
 /* TOP LINKS */
 .top-links {
   position: absolute;
-  top: 25%;  /* Keep top links at 25% from the top */
+  top: 25%;
   display: flex;
   gap: 4vw;
   justify-content: center;
@@ -77,7 +77,7 @@ body {
   position: absolute;
   bottom: 25%;
   display: flex;
-  flex-wrap: nowrap;         /* Default: single row */
+  flex-wrap: nowrap;
   justify-content: center;
   column-gap: 7vw;
   row-gap: 1em;
@@ -107,8 +107,10 @@ body {
 
 /* MEDIA QUERIES */
 
-/* ✅ Medium screens: 890px to 855px — Allow wrap to create a two-row layout */
-@media (max-width: 890px) and (min-width: 855px) {
+/* MEDIA QUERIES */
+
+/* ✅ Medium screens: 880px to 854px — Allow wrap to create a two-row layout */
+@media (max-width: 880px) and (min-width: 855px) {
   .bottom-links {
     flex-wrap: wrap;
     flex-direction: row;
@@ -118,10 +120,10 @@ body {
   }
 }
 
-/* ✅ Mid-size screens: 854px to 770px — Flex stays wrapped with 2 rows */
-@media (max-width: 854px) and (min-width: 770px) {
+/* ✅ Small screens: 769px to 854px — Keep the bottom-links in two rows, never back to one row */
+@media (max-width: 854px) and (min-width: 769px) {
   .bottom-links {
-    flex-wrap: wrap; /* Keep as two rows */
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     column-gap: 5vw;
@@ -129,10 +131,11 @@ body {
   }
 }
 
-/* ✅ Small screens: 769px and below — Stack bottom-links vertically */
-@media (max-width: 769px) {
+/* ✅ Screens: 576px to 768px — Keep the bottom-links in two rows, never revert to a single row */
+@media (max-width: 768px) and (min-width: 576px) {
   .bottom-links {
-    flex-wrap: wrap; /* Keep wrapped for smaller sizes */
+    margin-top: 10vh !important;  /* Push the links down by 10% of the viewport height */
+    flex-wrap: wrap;  /* Ensure they stay in two rows */
     flex-direction: row;
     justify-content: center;
     column-gap: 5vw;
