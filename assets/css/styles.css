@@ -58,18 +58,25 @@ body {
   white-space: nowrap;
   width: clamp(90%, 33vw, 100%);
   text-align: center;
+  position: relative;
+  top: -1em; /* or -1.2em if you need more lift */
 }
 
 .main-title {
   font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
   font-weight: 400;
   line-height: 1;
+  /*vertical-align: baseline;
+  position: relative;
+  top: -0.07em;  */
 }
 
 .sub-title {
   font-size: clamp(3.5rem, 6vw + 1rem, 6.75rem);
   font-weight: 900;
   line-height: 1;
+  position: relative;
+  top: 0.06em; /* -0.07em or: transform: translateY(-0.07em);  */
 }
 
 /* BOTTOM LINKS */
@@ -117,6 +124,12 @@ body {
     justify-content: center;
     column-gap: 5vw;
     row-gap: 0.8em;
+  }
+}
+
+@media (min-width: 850px) {
+  .bottom-links {
+    bottom: calc(25% + 0.7em); /* Lifts it slightly (higher on the screen) */
   }
 }
 
