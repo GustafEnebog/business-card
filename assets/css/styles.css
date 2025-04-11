@@ -33,13 +33,12 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   color: #222;
-  transition: color 0.3s ease, font-weight 0.3s ease; /* Transition for color and font-weight */
-  font-weight: 300; /* Regular font weight */
+  transition: color 0.3s ease, font-weight 0.3s ease;
+  font-weight: 400;
 }
 
-/* Bold on hover for GitHub/LinkedIn links */
 .top-links a:hover {
-  font-weight: 600; /* Bold effect */
+  font-weight: 600;
 }
 
 /* MAIN TITLE AREA */
@@ -60,7 +59,7 @@ body {
   width: clamp(90%, 33vw, 100%);
   text-align: center;
   position: relative;
-  top: -1em; /* or -1.2em if you need more lift */
+  top: -1em;
 }
 
 .main-title {
@@ -97,29 +96,32 @@ body {
   text-decoration: none;
   color: #000;
   opacity: 0;
-  transition: opacity 2s ease, color 0.3s ease; /* Transition for opacity and color */
+  transition: opacity 2s ease, color 0.3s ease;
   white-space: nowrap;
-  font-weight: 300; /* Regular font weight for bottom links */
+  font-weight: 300;
 }
 
 .bottom-links a.show {
   opacity: 1;
 }
 
-/* Lower links color change on hover */
-.bottom-links a:hover:nth-child(1) {
-  color: #c849a7;
+.bottom-links a:hover:nth-child(1) { color: #c849a7; }
+.bottom-links a:hover:nth-child(2) { color: #ffa300; }
+.bottom-links a:hover:nth-child(3) { color: #00f3fe; }
+
+/* ✅ Prevent horizontal scrollbars without cutting off content */
+html {
+  overflow-x: hidden;
 }
-.bottom-links a:hover:nth-child(2) {
-  color: #ffa300;
-}
-.bottom-links a:hover:nth-child(3) {
-  color: #00f3fe;
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 /* MEDIA QUERIES */
 
-/* Medium screens: 880px to 854px */
+/* ✅ Medium screens: 880px to 854px — Allow wrap to create a two-row layout */
 @media (max-width: 880px) and (min-width: 855px) {
   .bottom-links {
     flex-wrap: wrap;
@@ -132,10 +134,11 @@ body {
 
 @media (min-width: 850px) {
   .bottom-links {
-    bottom: calc(25% + 0.7em); /* Lifts it slightly (higher on the screen) */
+    bottom: calc(25% + 0.7em);
   }
 }
 
+/* ✅ Small screens: 769px to 854px */
 @media (max-width: 854px) and (min-width: 769px) {
   .bottom-links {
     flex-wrap: wrap;
@@ -146,9 +149,10 @@ body {
   }
 }
 
+/* ✅ Screens: 576px to 768px */
 @media (max-width: 768px) and (min-width: 576px) {
   .bottom-links {
-    margin-top: 10vh !important;  /* Push the links down by 10% of the viewport height */
+    margin-top: 10vh !important;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -157,6 +161,7 @@ body {
   }
 }
 
+/* ✅ Small screens: 576px and below — stack bottom-links vertically */
 @media (max-width: 576px) {
   .top-links {
     top: 15%;
@@ -179,6 +184,7 @@ body {
   }
 }
 
+/* ✅ Extra small screens: 420px and below */
 @media (max-width: 420px) {
   .main-title-container {
     flex-direction: column;
@@ -195,6 +201,7 @@ body {
   }
 }
 
+/* ✅ Extra extra small screens: 290px and below */
 @media (max-width: 290px) {
   .bottom-links {
     flex-wrap: wrap;
