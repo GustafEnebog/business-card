@@ -33,12 +33,13 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   color: #222;
-  transition: color 0.3s ease;
-  font-weight: 300;
+  transition: color 0.3s ease, font-weight 0.3s ease; /* Transition for color and font-weight */
+  font-weight: 300; /* Regular font weight */
 }
 
+/* Bold on hover for GitHub/LinkedIn links */
 .top-links a:hover {
-  color: #555;
+  font-weight: 600; /* Bold effect */
 }
 
 /* MAIN TITLE AREA */
@@ -66,9 +67,6 @@ body {
   font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
   font-weight: 400;
   line-height: 1;
-  /*vertical-align: baseline;
-  position: relative;
-  top: -0.07em;  */
 }
 
 .sub-title {
@@ -76,7 +74,7 @@ body {
   font-weight: 900;
   line-height: 1;
   position: relative;
-  top: 0.06em; /* -0.07em or: transform: translateY(-0.07em);  */
+  top: 0.06em;
 }
 
 /* BOTTOM LINKS */
@@ -99,24 +97,29 @@ body {
   text-decoration: none;
   color: #000;
   opacity: 0;
-  transition: opacity 2s ease, color 0.3s ease;
+  transition: opacity 2s ease, color 0.3s ease; /* Transition for opacity and color */
   white-space: nowrap;
-  font-weight: 300;
+  font-weight: 300; /* Regular font weight for bottom links */
 }
 
 .bottom-links a.show {
   opacity: 1;
 }
 
-.bottom-links a:hover:nth-child(1) { color: #c849a7; }
-.bottom-links a:hover:nth-child(2) { color: #ffa300; }
-.bottom-links a:hover:nth-child(3) { color: #00f3fe; }
+/* Lower links color change on hover */
+.bottom-links a:hover:nth-child(1) {
+  color: #c849a7;
+}
+.bottom-links a:hover:nth-child(2) {
+  color: #ffa300;
+}
+.bottom-links a:hover:nth-child(3) {
+  color: #00f3fe;
+}
 
 /* MEDIA QUERIES */
 
-/* MEDIA QUERIES */
-
-/* ✅ Medium screens: 880px to 854px — Allow wrap to create a two-row layout */
+/* Medium screens: 880px to 854px */
 @media (max-width: 880px) and (min-width: 855px) {
   .bottom-links {
     flex-wrap: wrap;
@@ -133,7 +136,6 @@ body {
   }
 }
 
-/* ✅ Small screens: 769px to 854px — Keep the bottom-links in two rows, never back to one row */
 @media (max-width: 854px) and (min-width: 769px) {
   .bottom-links {
     flex-wrap: wrap;
@@ -144,11 +146,10 @@ body {
   }
 }
 
-/* ✅ Screens: 576px to 768px — Keep the bottom-links in two rows, never revert to a single row */
 @media (max-width: 768px) and (min-width: 576px) {
   .bottom-links {
     margin-top: 10vh !important;  /* Push the links down by 10% of the viewport height */
-    flex-wrap: wrap;  /* Ensure they stay in two rows */
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     column-gap: 5vw;
@@ -156,7 +157,6 @@ body {
   }
 }
 
-/* ✅ Small screens: 576px and below — stack bottom-links vertically */
 @media (max-width: 576px) {
   .top-links {
     top: 15%;
@@ -179,7 +179,6 @@ body {
   }
 }
 
-/* ✅ Extra small screens: 420px and below — vertical title stack */
 @media (max-width: 420px) {
   .main-title-container {
     flex-direction: column;
@@ -196,18 +195,17 @@ body {
   }
 }
 
-/* EXTRA EXTRA SMALL SCREENS: 290px and below — adjust layout and font size */
 @media (max-width: 290px) {
   .bottom-links {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    column-gap: 3vw; /* Reduced gap for very small screens */
+    column-gap: 3vw;
     row-gap: 0.8em;
   }
 
   .bottom-links a {
-    font-size: 0.9rem; /* Smaller font size for small screens */
+    font-size: 1rem;
   }
 }
