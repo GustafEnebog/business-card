@@ -51,9 +51,18 @@ body {
   width: 100%;
 }
 
+/* MAIN TITLE AREA */
+.main-title-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .main-title-container {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-end; /* Align items by their bottom edge */
   justify-content: center;
   gap: 1.3em;
   white-space: nowrap;
@@ -65,6 +74,9 @@ body {
   font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
   font-weight: 400;
   line-height: 1;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.07em; /* ✅ adjust this value until it aligns visually */
 }
 
 .sub-title {
