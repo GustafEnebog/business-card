@@ -38,8 +38,8 @@ body {
 }
 
 .top-links a:hover {
-  font-weight: 600;
-  color: #222;
+  font-weight: 600; /* On hover, change to bold */
+  color: black; /* Ensure the color remains black */
 }
 
 /* MAIN TITLE AREA */
