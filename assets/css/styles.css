@@ -136,6 +136,38 @@ body {
   text-shadow: 0 0 16px #00f3fe, 0 0 32px #00f3fe, 0 0 48px #00f3fe, 0 0 64px #00f3fe, 0 0 80px #00f3fe;
 }
 
+
+
+
+/* General styles */
+.page-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 999;
+  transition: transform 0.8s ease;
+  pointer-events: none; /* Only active when sliding in */
+}
+
+.page-overlay iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Start offscreen in different directions */
+.from-left   { transform: translateX(-100%); }
+.from-right  { transform: translateX(100%); }
+.from-bottom { transform: translateY(100%); }
+
+/* Active state */
+.page-overlay.active {
+  transform: translateX(0) translateY(0);
+  pointer-events: all;
+}
+
 /* MEDIA QUERIES */
 
 /* ✅ Medium screens: 880px to 854px — Allow wrap to create a two-row layout */
