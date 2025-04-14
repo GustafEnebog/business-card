@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Figtree', sans-serif;
+  font-family: 'Figtree', 'Montserrat', sans-serif;
   height: 100vh;
   background: linear-gradient(to bottom, #555654 0%, #7a7c79 12.5%, #7a7c79 87.5%, #555654 100%);
   color: black;
