@@ -159,6 +159,11 @@ body {
     row-gap: 0.8em;
     bottom: 10%;
   }
+
+  .main-title-container {
+    margin-top: -2vh; /* raise it upward */
+  }
+
 }
 
 /* ✅ Screens: 576px to 768px — Keep the bottom-links in two rows, never revert to a single row */
@@ -172,6 +177,11 @@ body {
     row-gap: 0.8em;
     bottom: 10%;
   }
+
+  .main-title-container {
+    margin-top: -2vh; /* raise it upward */
+  }
+
 }
 
 /* ✅ Small screens: 576px and below — stack bottom-links vertically */
