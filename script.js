@@ -29,12 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // Determine which page to load
       const target = link.getAttribute("href").split("/")[1].split(".")[0];
 
-      // Determine slide direction (optional: you can customize based on link classes)
-      const directionClass = link.classList.contains("slide-left")
-        ? "from-left"
-        : link.classList.contains("slide-bottom")
-        ? "from-bottom"
-        : "from-right";
+      // Determine slide direction based on custom classes
+      let directionClass = "from-right";  // Default slide direction
+      if (link.classList.contains("slide-left")) {
+        directionClass = "from-left";
+      } else if (link.classList.contains("slide-bottom")) {
+        directionClass = "from-bottom";
+      }
 
       overlay.classList.add(directionClass);
 
