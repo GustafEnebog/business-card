@@ -51,15 +51,6 @@ body {
   width: 100%;
 }
 
-/* MAIN TITLE AREA */
-.main-title-wrapper {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
 .main-title-container {
   display: flex;
   align-items: flex-end; /* Align items by their bottom edge */
@@ -136,9 +127,6 @@ body {
   text-shadow: 0 0 16px #00f3fe, 0 0 32px #00f3fe, 0 0 48px #00f3fe, 0 0 64px #00f3fe, 0 0 80px #00f3fe;
 }
 
-
-
-
 /* General styles */
 .page-overlay {
   position: fixed;
@@ -168,13 +156,7 @@ body {
   pointer-events: all;
 }
 
-
-
-
-
-
 /* === General styles for subpages === */
-
 .subpage-body {
   background: linear-gradient(to bottom, #00cdda 0%, #00e9ff 12.5%, #00e9ff 87.5%, #00cdda 100%);
   padding: 40px 20px;
@@ -188,39 +170,6 @@ body {
   gap: 0.5em;
   margin-bottom: 2em;
 }
-
-
-
-.main-title {
-  font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
-  font-weight: 400;
-  line-height: 1;
-  vertical-align: baseline;
-  position: relative;
-  top: -0.07em; /* ✅ adjust this value until it aligns visually */
-}
-
-.sub-title {
-  font-size: clamp(3.5rem, 6vw + 1rem, 6.75rem);
-  font-weight: 900;
-  line-height: 1;
-}
-
-
-.subpage-title-primary {
-  font-size: clamp(1.875rem, 3vw + 0.75rem, 3.375rem); /* Balanced size between original and half-size */
-  font-weight: 900;
-  line-height: 1;
-}
-
-.subpage-title-secondary {
-  font-size: clamp(1.3rem, 2.25vw + 0.75rem, 2.5rem); /* Proportional to primary */
-  font-weight: 300;
-  line-height: 1;
-}
-
-
-
 
 .subpage-text {
   font-size: 1.2rem;
@@ -254,10 +203,6 @@ body {
   color: black;
 }
 
-
-
-
-
 /* SUBPAGE BACKGROUND */
 body.sub-page {
   background: linear-gradient(to bottom, #00e9ff 0%, #9efaff 12.5%, #9efaff 87.5%, #00e9ff 100%);
@@ -265,20 +210,13 @@ body.sub-page {
 
 /* SUBPAGE TITLE ADJUSTMENT */
 body.sub-page .main-title {
-  font-size: clamp(1.25rem, 2vw + 1rem, 2.25rem); /* half the size of landing */
+  font-size: clamp(0.625rem, 1vw + 0.5rem, 1.125rem); /* Half the size from before */
   font-weight: 300;
 }
 
 body.sub-page .sub-title {
-  font-size: clamp(2.25rem, 4vw + 1rem, 4.5rem);  /* larger and first */
+  font-size: clamp(1.125rem, 2vw + 0.5rem, 2.25rem); /* Half of original "MACHINE LEARNING" size */
   font-weight: 900;
-}
-
-/* SUBPAGE DESCRIPTION TEXT */
-.description-text {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin: 0.5em 0;
 }
 
 /* LOGO GRID */
@@ -296,12 +234,62 @@ body.sub-page .sub-title {
   width: auto;
 }
 
-
 /* CONTACT INFO */
 .contact-info {
-  font-size: 1.1rem;
+  font-size: 1.2rem; /* Ensure it matches description text size */
   font-weight: 300;
   margin-top: 2em;
+  text-align: center; /* Align the text properly */
+}
+
+/* Machine Learning Engineer Centering */
+.sub-page .ml-title-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 1em; /* Space between "Machine Learning" and "Engineer" */
+  width: 100%;
+  text-align: center;
+}
+
+.sub-page .ml-title, .sub-page .ml-subtitle {
+  font-weight: 300;
+  line-height: 1;
+}
+
+.sub-page .ml-title {
+  font-size: clamp(1.5rem, 3vw + 1rem, 3rem); /* Larger "Machine Learning" */
+  font-weight: 900; /* Bold */
+  line-height: 1;
+}
+
+
+
+
+.sub-page .ml-subtitle {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem); /* Smaller "Engineer" */
+  font-weight: 300; /* Thinner */
+  line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lowered contact info to match bottom-links height from index.html */
+.lowered-contact {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
 }
 
 /* BACK ARROW */
@@ -318,31 +306,103 @@ body.sub-page .sub-title {
 }
 
 /* === Machine Learning Page Specific Fixes === */
-
-/* Smaller title fonts for ml.html */
 .ml-title {
-  font-size: clamp(1.2rem, 1.8vw + 1rem, 2rem); /* around 2/3 of old */
+  font-size: clamp(0.8rem, 1.6vw + 1rem, 1.6rem); /* Smaller "MACHINE LEARNING" */
   font-weight: 400;
 }
 
 .ml-subtitle {
-  font-size: clamp(2rem, 3vw + 1rem, 3.5rem); /* slightly smaller */
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.75rem); /* Even smaller for "ENGINEER" */
   font-weight: 900;
 }
 
-/* Slightly smaller and tighter spacing for description */
 .ml-description {
-  font-size: 1rem;
+  font-size: 1rem; /* Slightly smaller description */
   margin: 0.3em 0;
 }
 
-/* Lowered contact info to match bottom-links height from index.html */
-.lowered-contact {
-  position: absolute;
-  bottom: 15%;
-  width: 100%;
+/* CONTACT INFO */
+.contact-info {
+  font-size: 1.2rem; /* Ensure it matches description text size */
+  font-weight: 300;
+  margin-top: 2em;
+  text-align: center; /* Align the text properly */
+}
+
+/* New smaller font class */
+.smaller-text {
+  font-size: 0.9rem; /* Slightly smaller text */
+  font-weight: 300;
+}
+
+/* Contact info section with smaller text for consistency */
+.contact-info p {
+  font-size: 1rem; /* Keep it readable, but smaller than the default */
+}
+
+
+
+
+
+/* Machine Learning title: Large and Bold */
+.ml-title {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 900;
+  font-size: 3rem; /* Large font size */
   text-align: center;
 }
+
+/* Engineer subtitle: Thinner and Smaller */
+.ml-subtitle {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.5rem, 3vw + 1rem, 2.8rem);
+  text-align: center;
+  margin-top: -10px;
+}
+
+/* Descriptive Text with smaller font */
+.ml-description p {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Smaller font for contact info */
+.smaller-text {
+  font-size: 0.9rem; /* Slightly smaller text */
+  font-weight: 300;
+  text-align: center;
+}
+
+/* Logos container styling */
+.logo-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.logo-container img {
+  width: 100px; /* Resize logos */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-container img:hover {
+  transform: scale(1.1); /* Hover effect for logos */
+}
+
+/* Styling for contact info */
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+
 
 /* MEDIA QUERIES */
 
