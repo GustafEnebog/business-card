@@ -8,59 +8,68 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, 2000);
 
-  // 🔸 Handle subpage links (on clicking one of the bottom links)
+  // 🔸 Handle subpage links
   const links = document.querySelectorAll(".bottom-links a");
 
-  // Create the sliding overlay container only when a link is clicked
   links.forEach(link => {
     link.addEventListener("click", e => {
-      e.preventDefault();  // Prevent default link behavior
+      e.preventDefault();
 
-      // 🔸 Create the overlay container when a link is clicked
+      // 🔸 Create overlay
       const overlay = document.createElement("div");
       overlay.className = "page-overlay";
-      document.body.appendChild(overlay);
 
-      console.log(`Clicked on: ${link.href}`);  // Debugging log
+      // 🔸 Add back arrow button (instead of ✕)
+      const backArrow = document.createElement("div");
+      backArrow.className = "back-arrow";
+      backArrow.innerHTML = `<a href="#" id="closeOverlay">&#8592;</a>`;
+      overlay.appendChild(backArrow);
 
-      // Clean existing classes on overlay
-      overlay.className = "page-overlay";
+      // 🔸 Add loading indicator
+      const loading = document.createElement("div");
+      loading.className = "loading-indicator";
+      loading.innerText = "Loading...";
+      overlay.appendChild(loading);
 
-      // Determine which page to load
+      // 🔸 Determine target page
       const target = link.getAttribute("href").split("/")[1].split(".")[0];
 
-      // Determine slide direction based on custom classes
-      let directionClass = "from-right";  // Default slide direction
+      // 🔸 Determine slide direction
+      let directionClass = "from-right";
       if (link.classList.contains("slide-left")) {
         directionClass = "from-left";
       } else if (link.classList.contains("slide-bottom")) {
         directionClass = "from-bottom";
       }
-
       overlay.classList.add(directionClass);
 
-      // Inject iframe with close button
-      overlay.innerHTML = `
-        <button class="close-overlay">✕</button>
-        <iframe src="pages/${target}.html"></iframe>
-      `;
+      // 🔸 Inject iframe
+      const iframe = document.createElement("iframe");
+      iframe.src = `pages/${target}.html`;
+      overlay.appendChild(iframe);
 
-      console.log(`Loading iframe with src: pages/${target}.html`);  // Debugging log
+      // 🔸 On iframe load, remove loading indicator
+      iframe.onload = () => {
+        loading.remove();
+      };
 
-      // Force reflow to trigger animation
-      void overlay.offsetWidth;
+      // 🔸 On iframe error, show fallback message
+      iframe.onerror = () => {
+        loading.innerText = "Failed to load content.";
+      };
 
-      // Activate slide-in animation
+      // 🔸 Append overlay and trigger animation
+      document.body.appendChild(overlay);
+      void overlay.offsetWidth; // Force reflow
       overlay.classList.add("active");
 
-      // 🔸 Handle close button
-      overlay.addEventListener("click", e => {
-        if (e.target.classList.contains("close-overlay")) {
-          overlay.classList.remove("active");
-          setTimeout(() => {
-            overlay.remove();  // Remove overlay after animation
-          }, 800);  // Delay to match the animation duration
-        }
+      // 🔸 Arrow-based close logic with slide-out
+      backArrow.querySelector("#closeOverlay").addEventListener("click", (e) => {
+        e.preventDefault();
+        overlay.classList.remove("active");
+        setTimeout(() => {
+          overlay.remove();
+        }, 800);
       });
     });
   });
