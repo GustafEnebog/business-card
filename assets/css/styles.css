@@ -168,6 +168,182 @@ body {
   pointer-events: all;
 }
 
+
+
+
+
+
+/* === General styles for subpages === */
+
+.subpage-body {
+  background: linear-gradient(to bottom, #00cdda 0%, #00e9ff 12.5%, #00e9ff 87.5%, #00cdda 100%);
+  padding: 40px 20px;
+  font-family: 'Figtree', 'Montserrat', sans-serif;
+}
+
+.subpage-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 2em;
+}
+
+
+
+.main-title {
+  font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.07em; /* ✅ adjust this value until it aligns visually */
+}
+
+.sub-title {
+  font-size: clamp(3.5rem, 6vw + 1rem, 6.75rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+
+.subpage-title-primary {
+  font-size: clamp(1.875rem, 3vw + 0.75rem, 3.375rem); /* Balanced size between original and half-size */
+  font-weight: 900;
+  line-height: 1;
+}
+
+.subpage-title-secondary {
+  font-size: clamp(1.3rem, 2.25vw + 0.75rem, 2.5rem); /* Proportional to primary */
+  font-weight: 300;
+  line-height: 1;
+}
+
+
+
+
+.subpage-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto 2em auto;
+  text-align: center;
+}
+
+.subpage-logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+  margin-bottom: 3em;
+}
+
+.subpage-logo-grid img {
+  width: 60px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+}
+
+
+
+
+
+/* SUBPAGE BACKGROUND */
+body.sub-page {
+  background: linear-gradient(to bottom, #00e9ff 0%, #9efaff 12.5%, #9efaff 87.5%, #00e9ff 100%);
+}
+
+/* SUBPAGE TITLE ADJUSTMENT */
+body.sub-page .main-title {
+  font-size: clamp(1.25rem, 2vw + 1rem, 2.25rem); /* half the size of landing */
+  font-weight: 300;
+}
+
+body.sub-page .sub-title {
+  font-size: clamp(2.25rem, 4vw + 1rem, 4.5rem);  /* larger and first */
+  font-weight: 900;
+}
+
+/* SUBPAGE DESCRIPTION TEXT */
+.description-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0.5em 0;
+}
+
+/* LOGO GRID */
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.logo-container img {
+  height: 25px;
+  width: auto;
+}
+
+
+/* CONTACT INFO */
+.contact-info {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-top: 2em;
+}
+
+/* BACK ARROW */
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+}
+
+.back-arrow a {
+  color: black;
+  text-decoration: none;
+}
+
+/* === Machine Learning Page Specific Fixes === */
+
+/* Smaller title fonts for ml.html */
+.ml-title {
+  font-size: clamp(1.2rem, 1.8vw + 1rem, 2rem); /* around 2/3 of old */
+  font-weight: 400;
+}
+
+.ml-subtitle {
+  font-size: clamp(2rem, 3vw + 1rem, 3.5rem); /* slightly smaller */
+  font-weight: 900;
+}
+
+/* Slightly smaller and tighter spacing for description */
+.ml-description {
+  font-size: 1rem;
+  margin: 0.3em 0;
+}
+
+/* Lowered contact info to match bottom-links height from index.html */
+.lowered-contact {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
+}
+
 /* MEDIA QUERIES */
 
 /* ✅ Medium screens: 880px to 854px — Allow wrap to create a two-row layout */
