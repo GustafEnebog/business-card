@@ -36,6 +36,7 @@ body {
   transition: color 0.3s ease, opacity 1s ease;
   font-weight: 300;
   opacity: 0;
+  display: inline-block;
 }
 
 .top-links a:hover {
