@@ -31,10 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (backArrow) {
     backArrow.addEventListener("click", (e) => {
       e.preventDefault();
-      console.log("Back arrow clicked, closing overlay");
+      console.log("Back arrow clicked");
 
       const overlay = document.querySelector(".page-overlay");
+
       if (overlay) {
+        console.log("Overlay found, closing it");
         overlay.classList.remove("active");
         overlay.classList.add("from-right");
 
@@ -45,7 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
           showTopLinks();
         }, 800);
       } else {
-        console.warn("No overlay found when back arrow was clicked");
+        // If it's a subpage, navigate back to the homepage (or a specific URL)
+        if (window.location.pathname !== "/index.html" && window.location.pathname !== "/") {
+          console.log("Subpage detected, navigating back to homepage");
+          window.location.href = "/index.html"; // Adjust this path to match your homepage URL
+        } else {
+          console.log("Already on homepage, not navigating back.");
+        }
       }
     });
   }
