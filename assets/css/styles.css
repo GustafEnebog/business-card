@@ -37,6 +37,7 @@ body {
   font-weight: 300;
   opacity: 0;
   display: inline-block;
+  visibility: hidden;
 }
 
 .top-links a:hover {
@@ -292,6 +293,30 @@ body.sub-page .sub-title {
   text-align: center;
 }
 
+
+
+
+.back-arrow {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.top-links a,
+.bottom-links a {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.top-links a.show,
+.bottom-links a.show {
+  opacity: 1;
+  visibility: visible;
+}
 
 
 /* MEDIA QUERIES */
