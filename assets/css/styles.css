@@ -486,6 +486,22 @@ body.sub-page .sub-title {
   visibility: visible;
 }
 
+
+
+
+
+/* Update the position of the speech bubble */
+#ml-bubble-img {
+  position: absolute;
+  top: 20%; /* Adjust the vertical position closer to the title */
+  right:15%; /* Adjust the horizontal position */
+  max-width: 18%; /* Resize the image to fit better */
+  margin-top: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 10; /* Ensure the image is above the text */
+}
+
 /* MEDIA QUERIES */
 
 /* ✅ Medium screens: 880px to 854px — Allow wrap to create a two-row layout */
