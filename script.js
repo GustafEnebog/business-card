@@ -5,11 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const isSubpage = document.body.classList.contains('sub-page');
   const cameFromSubpage = sessionStorage.getItem('cameFromSubpage') === 'true';
 
-  let linkClicked = false;
+  let linkClicked = sessionStorage.getItem('linkClicked') === 'true'; // Check if a link was clicked previously in the session
 
   document.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       linkClicked = true;
+      sessionStorage.setItem('linkClicked', 'true'); // Store in sessionStorage
     });
   });
 
@@ -42,11 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Show image (the "speech bubble") after 10s if no link was clicked
     setTimeout(() => {
-      if (!linkClicked) {
+      if (!linkClicked) { // Only show if no link was clicked
         const wrapper = document.querySelector('.main-title-wrapper');
         if (wrapper && !document.getElementById('ml-bubble-img')) {
           const img = document.createElement('img');
-          img.src = 'assets/images/speech-bubble-landing-page.png'; // Make sure the image path is correct
+          img.src = 'assets/images/speech-bubble-landing-page.png'; // Ensure the image path is correct
           img.alt = 'Machine Learning Collage';
           img.id = 'ml-bubble-img';
           wrapper.appendChild(img);
