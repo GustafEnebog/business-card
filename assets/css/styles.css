@@ -375,20 +375,25 @@ body.sub-page .sub-title {
 /* --- LOGOS & CONTACT --- */
 .logo-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  justify-items: center;
-  margin-top: 30px;
+  grid-template-columns: repeat(7, auto);
+  gap: 10px 10px;
+  justify-content: center;
+  justify-items: center; /* ⬅️ this centers each logo inside its grid cell */
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo-container img {
-  width: 100px;
-  height: auto;
+  height: 30px; /* makes logos smaller */
+  width: auto;
   transition: transform 0.3s ease-in-out;
 }
 
 .logo-container img:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 .contact-info {
