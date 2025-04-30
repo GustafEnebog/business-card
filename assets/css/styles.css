@@ -500,7 +500,7 @@ body.sub-page .sub-title {
   position: absolute;
   top: 20%; /* Adjust the vertical position closer to the title */
   right:15%; /* Adjust the horizontal position */
-  max-width: 18%; /* Resize the image to fit better */
+  max-height: 25vh; /* Resize the image to fit better */
   margin-top: 0;
   opacity: 0;
   transition: opacity 1s ease;
@@ -585,6 +585,10 @@ body.sub-page .sub-title {
     top: 60%;
   }
   
+  #ml-bubble-img {
+    top: 36%; /* or whatever value places it below the title */
+    right: 10%; /* optionally adjust horizontal position too */
+  }
 }
 
 /* ✅ Extra small screens: 420px and below — vertical title stack */
