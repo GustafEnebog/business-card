@@ -34,16 +34,22 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   color: #222;
-  transition: color 0.3s ease, opacity 1s ease;
+  transition: color 0.3s ease, opacity 0.5s ease, visibility 0.5s ease;
   font-weight: 300;
   opacity: 0;
-  display: inline-block;
   visibility: hidden;
+  display: inline-block;
 }
 
 .top-links a:hover {
   font-weight: 600;
   color: black;
+}
+
+.top-links a.show,
+.bottom-links a.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* --- MAIN TITLE AREA --- */
@@ -108,11 +114,15 @@ body {
 
 
 
-.top-links a.show,
-.bottom-links a.show {
-  opacity: 1;
-  visibility: visible;
-}
+
+
+
+
+
+
+
+
+
 
 /* Hover effects with glow */
 .bottom-links a:hover:nth-child(1) {
@@ -248,17 +258,10 @@ body.sub-page .sub-title {
 }
 
 /* BACK ARROW */
-.back-arrow {
-  position: fixed; /* absolut */
-  top: 20px;
-  left: 20px;
-  z-index: 999;
-  cursor: pointer;
-  display: block;
-}
 
 .back-arrow {
   position: absolute;  /* fixed */
+  /* display: block; */
   top: 20px;
   left: 20px;
   font-size: 2rem;
@@ -332,35 +335,6 @@ body.sub-page .sub-title {
   font-size: 1rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-.top-links a.show,
-.bottom-links a.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-
-.top-links a,
-.bottom-links a {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.top-links a.show,
-.bottom-links a.show {
-  opacity: 1;
-  visibility: visible;
-}
 
 
 
