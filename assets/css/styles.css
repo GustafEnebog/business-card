@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* === RESET & BASE STYLES === */
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +19,7 @@ body {
   position: relative;
 }
 
-
-/* --- TOP LINKS --- */
+/* === TOP LINKS === */
 .top-links {
   position: absolute;
   top: 15%;
@@ -34,16 +33,40 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   color: #222;
-  transition: color 0.3s ease, opacity 0.5s ease, visibility 0.5s ease;
   font-weight: 300;
   opacity: 0;
   visibility: hidden;
   display: inline-block;
+  transition: color 0.3s ease, opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .top-links a:hover {
   font-weight: 600;
   color: black;
+}
+
+/* === BOTTOM LINKS === */
+.bottom-links {
+  position: absolute;
+  bottom: 15%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 7vw;
+  row-gap: 1em;
+  width: 100%;
+  max-width: 90vw;
+  text-align: center;
+}
+
+.bottom-links a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 2s ease, color 0.3s ease;
 }
 
 .top-links a.show,
@@ -52,7 +75,20 @@ body {
   visibility: visible;
 }
 
-/* --- MAIN TITLE AREA --- */
+/* --- BOTTOM LINK HOVER GLOW EFFECTS --- */
+.bottom-links a:hover:nth-child(1) {
+  text-shadow: 0 0 16px #c849a7, 0 0 32px #c849a7, 0 0 48px #c849a7, 0 0 64px #c849a7, 0 0 80px #c849a7;
+}
+
+.bottom-links a:hover:nth-child(2) {
+  text-shadow: 0 0 16px #ffa300, 0 0 32px #ffa300, 0 0 48px #ffa300, 0 0 64px #ffa300, 0 0 80px #ffa300;
+}
+
+.bottom-links a:hover:nth-child(3) {
+  text-shadow: 0 0 16px #00f3fe, 0 0 32px #00f3fe, 0 0 48px #00f3fe, 0 0 64px #00f3fe, 0 0 80px #00f3fe;
+}
+
+/* === MAIN TITLE AREA === */
 .main-title-wrapper {
   flex-grow: 1;
   display: flex;
@@ -83,58 +119,6 @@ body {
   font-size: clamp(3.5rem, 6vw + 1rem, 6.75rem);
   font-weight: 900;
   line-height: 1;
-}
-
-/* --- BOTTOM LINKS --- */
-.bottom-links {
-  position: absolute;
-  bottom: 15%;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  column-gap: 7vw;
-  row-gap: 1em;
-  width: 100%;
-  max-width: 90vw;
-  text-align: center;
-}
-
-.bottom-links a {
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: #000;
-  font-weight: 300;
-  opacity: 0;
-  transition: opacity 2s ease, color 0.3s ease;
-  white-space: nowrap;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Hover effects with glow */
-.bottom-links a:hover:nth-child(1) {
-  text-shadow: 0 0 16px #c849a7, 0 0 32px #c849a7, 0 0 48px #c849a7, 0 0 64px #c849a7, 0 0 80px #c849a7;
-}
-
-.bottom-links a:hover:nth-child(2) {
-  text-shadow: 0 0 16px #ffa300, 0 0 32px #ffa300, 0 0 48px #ffa300, 0 0 64px #ffa300, 0 0 80px #ffa300;
-}
-
-.bottom-links a:hover:nth-child(3) {
-  text-shadow: 0 0 16px #00f3fe, 0 0 32px #00f3fe, 0 0 48px #00f3fe, 0 0 64px #00f3fe, 0 0 80px #00f3fe;
 }
 
 /* === SUBPAGE STYLES === */
@@ -199,14 +183,14 @@ body.sub-page .sub-title {
   font-size: 1rem;
 }
 
-/* Optional: smaller text utility */
-.smaller-text {
-  font-size: 0.9rem;
-  font-weight: 300;
+.lowered-contact {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
   text-align: center;
 }
 
-/* --- MACHINE LEARNING PAGE --- */
+/* === MACHINE LEARNING PAGE === */
 .sub-page .ml-title-container {
   display: flex;
   justify-content: center;
@@ -227,7 +211,7 @@ body.sub-page .sub-title {
   font-weight: 300;
   line-height: 1;
   position: relative;
-  top: -0.1em; /* Adjust vertical alignment */
+  top: -0.1em;
 }
 
 .ml-description {
@@ -237,31 +221,9 @@ body.sub-page .sub-title {
   margin-top: 20px;
 }
 
-
-.lowered-contact {
-  position: absolute;
-  bottom: 15%;
-  width: 100%;
-  text-align: center;
-}
-
-
-/* === SUBPAGE STYLES === */
-
-
-.subpage-logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5em;
-  margin-bottom: 3em;
-}
-
-/* BACK ARROW */
-
+/* === BACK ARROW === */
 .back-arrow {
-  position: absolute;  /* fixed */
-  /* display: block; */
+  position: absolute;
   top: 20px;
   left: 20px;
   font-size: 2rem;
@@ -270,13 +232,9 @@ body.sub-page .sub-title {
   color: #000;
   text-decoration: none;
   opacity: 1;
-  z-index: 999;  /* 1000 */
+  z-index: 999;
   transition: transform 0.3s ease;
   cursor: pointer;
-}
-
-.back-arrow a:hover {
-  transform: scale(1.1);
 }
 
 .back-arrow a {
@@ -285,78 +243,65 @@ body.sub-page .sub-title {
 }
 
 .back-arrow a:hover {
+  transform: scale(1.1);
   text-decoration: underline;
 }
 
-/* --- LOGOS & CONTACT --- */
-.logo-container img:hover {
-  transform: scale(1.1);
-}
-
+/* === LOGO CONTAINER === */
 .logo-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 logos per row  grid-template-columns: repeat(7, auto); 3 logos per row */
-  gap: 10px 10px;  /* gap: 10px; */
-  justify-content: center;
-  justify-items: center; /* ⬅️ this centers each logo inside its grid cell */
-  margin-top: 20px;
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-  max-width: 80px;
-  margin-left: auto;
-  margin-right: auto;
-
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  max-width: 40vw; /* Limits how wide the container can stretch */
-  margin: 0 auto;
+  justify-content: center;
+  max-width: 41vw;
+  /* max-width: 90vw; */
+
+
+  margin: 2em auto 0 auto;
+
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+
 }
 
 .logo-container img {
-  height: 30px; /* makes logos smaller */
+  height: 30px;
   width: auto;
   transition: transform 0.3s ease-in-out;
+
+  /* height: auto;
+  width: clamp(60px, 8vw, 100px);
+  object-fit: contain; */
 }
 
-.logo {
-  flex: 1 1 20%; /* Adjust to control how many logos per row */
-  max-width: 100px; /* Optional: ensures logos don’t grow too large */
-}
+/* .logo-container img:hover {
+  transform: scale(1.1);
+} */
 
-
-
-.logo-container img:hover {
-  /* transform: scale(1.1); */
-}
-
-.contact-info p {
-  font-size: 1rem;
-}
-
-
-
-
-
-
-/* Update the position of the speech bubble */
+/* === SPEECH BUBBLE === */
 #ml-bubble-img {
   position: absolute;
-  top: 20%; /* Adjust the vertical position closer to the title */
-  right:15%; /* Adjust the horizontal position */
-  max-height: 25vh; /* Resize the image to fit better */
+  top: 20%;
+  right: 15%;
+  max-height: 25vh;
   margin-top: 0;
   opacity: 0;
   transition: opacity 1s ease;
-  z-index: 10; /* Ensure the image is above the text */
+  z-index: 10;
 }
 
+/* === UTILITY === */
+.smaller-text {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: center;
+}
 
+/* === MEDIA QUERIES === */
 
-/* MEDIA QUERIES */
-
-/* ✅ Medium screens: 880px to 854px — Allow wrap to create a two-row layout */
+/* Medium screens: 855px–880px */
 @media (max-width: 880px) and (min-width: 855px) {
   .bottom-links {
     flex-wrap: wrap;
@@ -365,9 +310,10 @@ body.sub-page .sub-title {
     column-gap: 5vw;
     row-gap: 0.8em;
   }
+
 }
 
-/* ✅ Small screens: 769px to 854px — Keep the bottom-links in two rows, never back to one row */
+/* Small screens: 769px–854px */
 @media (max-width: 854px) and (min-width: 769px) {
   .bottom-links {
     flex-wrap: wrap;
@@ -379,16 +325,14 @@ body.sub-page .sub-title {
   }
 
   .main-title-container {
-    margin-top: -2vh; /* raise it upward */
+    margin-top: -2vh;
   }
-
 }
 
-/* ✅ Screens: 576px to 768px — Keep the bottom-links in two rows, never revert to a single row */
+/* Tablet screens: 576px–768px */
 @media (max-width: 768px) and (min-width: 576px) {
   .bottom-links {
-    /* margin-top: 10vh !important;   Push the links down by 10% of the viewport height */
-    flex-wrap: wrap;  /* Ensure they stay in two rows */
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     column-gap: 5vw;
@@ -397,21 +341,22 @@ body.sub-page .sub-title {
   }
 
   .main-title-container {
-    margin-top: -2vh; /* raise it upward */
+    margin-top: -2vh;
+  }
+
+  .logo-container {
+    max-width: 70vw;
   }
 
 }
 
-/* ✅ Small screens: 576px and below — stack bottom-links vertically */
+/* Small mobile: below 576px */
 @media (max-width: 576px) {
   .top-links {
     top: 15%;
   }
 
-  .main-title-wrapper {
-    margin-top: -20vh;
-  }
-
+  .main-title-wrapper,
   .main-title-container {
     margin-top: -20vh;
   }
@@ -421,24 +366,21 @@ body.sub-page .sub-title {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    gap: 0.7em; /* Reduced vertical spacing */
-  }  
-
-  .top-links {
-    top: 15%;
+    gap: 0.7em;
   }
 
-  .bottom-links {
-    top: 60%;
-  }
-  
   #ml-bubble-img {
-    top: 36%; /* or whatever value places it below the title */
-    right: 10%; /* optionally adjust horizontal position too */
+    top: 36%;
+    right: 10%;
   }
+
+  .logo-container {
+    max-width: 80vw;
+  }
+
 }
 
-/* ✅ Extra small screens: 420px and below — vertical title stack */
+/* Extra small: below 420px */
 @media (max-width: 420px) {
   .main-title-container {
     flex-direction: column;
@@ -446,17 +388,8 @@ body.sub-page .sub-title {
     align-items: center;
   }
 
-  .top-links {
-    top: 15%;
-  }
-
-  .bottom-links {
-    top: 60%;
-  }
-
-  .logo-container img {
-    width: 80px; /* Ensure logo size remains consistent */
-    height: auto;
+  .logo-container {
+    max-width: 95vw;
   }
 
 }
