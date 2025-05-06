@@ -35,7 +35,7 @@ body {
   color: #222;
   font-weight: 300;
   opacity: 0;
-  visibility: hidden;
+  visibility: visible;
   display: inline-block;
   transition: color 0.3s ease, opacity 0.5s ease, visibility 0.5s ease;
 }
@@ -167,7 +167,7 @@ body.sub-page .sub-title {
 }
 
 .subpage-logo-grid img {
-  width: 60px;
+  width: 20px;
   height: auto;
   opacity: 0.8;
 }
@@ -267,7 +267,7 @@ body.sub-page .sub-title {
 }
 
 .logo-container img {
-  height: 30px;
+  height: 20px;
   width: auto;
   transition: transform 0.3s ease-in-out;
 
@@ -298,6 +298,34 @@ body.sub-page .sub-title {
   font-weight: 300;
   text-align: center;
 }
+
+/* === GLOBAL CONSTRAINTS === */
+.main-title-container,
+.ml-title-container,
+.ml-description,
+.logo-container {
+  min-width: 430px;
+}
+
+.logo-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: none;
+  max-height: calc(2 * 60px + 1.5em);
+  /* image height * 2 + gap */
+  overflow: hidden;
+}
+
+.logo-container img {
+  flex: 0 0 auto;
+}
+
+.ml-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 /* === MEDIA QUERIES === */
 
@@ -388,8 +416,22 @@ body.sub-page .sub-title {
     align-items: center;
   }
 
+  .main-title-container,
+  .ml-title-container,
+  .ml-description,
+  .logo-container {
+    min-width: auto;
+  }
+
   .logo-container {
     max-width: 95vw;
   }
 
+}
+
+/* Allow horizontal scroll ONLY on very small screens */
+@media (max-width: 359px) {
+  body {
+    overflow-x: auto;
+  }
 }
