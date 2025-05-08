@@ -45,47 +45,11 @@ body {
   color: black;
 }
 
-/* === BOTTOM LINKS === */
-.bottom-links {
-  position: absolute;
-  bottom: 15%;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  column-gap: 7vw;
-  row-gap: 1em;
-  width: 100%;
-  max-width: 90vw;
-  text-align: center;
-}
-
-.bottom-links a {
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: #000;
-  font-weight: 300;
-  opacity: 0;
-  white-space: nowrap;
-  transition: opacity 2s ease, color 0.3s ease;
-}
 
 .top-links a.show,
 .bottom-links a.show {
   opacity: 1;
   visibility: visible;
-}
-
-/* --- BOTTOM LINK HOVER GLOW EFFECTS --- */
-.bottom-links a:hover:nth-child(1) {
-  text-shadow: 0 0 16px #c849a7, 0 0 32px #c849a7, 0 0 48px #c849a7, 0 0 64px #c849a7, 0 0 80px #c849a7;
-}
-
-.bottom-links a:hover:nth-child(2) {
-  text-shadow: 0 0 16px #ffa300, 0 0 32px #ffa300, 0 0 48px #ffa300, 0 0 64px #ffa300, 0 0 80px #ffa300;
-}
-
-.bottom-links a:hover:nth-child(3) {
-  text-shadow: 0 0 16px #00f3fe, 0 0 32px #00f3fe, 0 0 48px #00f3fe, 0 0 64px #00f3fe, 0 0 80px #00f3fe;
 }
 
 /* === MAIN TITLE AREA === */
@@ -121,55 +85,41 @@ body {
   line-height: 1;
 }
 
-/* === SUBPAGE STYLES === */
-body.sub-page {
-  background: linear-gradient(to bottom, #00e9ff 0%, #9efaff 12.5%, #9efaff 87.5%, #00e9ff 100%);
-}
-
-body.sub-page .main-title {
-  font-size: clamp(0.625rem, 1vw + 0.5rem, 1.125rem);
-  font-weight: 300;
-}
-
-body.sub-page .sub-title {
-  font-size: clamp(1.125rem, 2vw + 0.5rem, 2.25rem);
-  font-weight: 900;
-}
-
-.subpage-body {
-  background: linear-gradient(to bottom, #00cdda 0%, #00e9ff 12.5%, #00e9ff 87.5%, #00cdda 100%);
-  padding: 40px 20px;
-  font-family: 'Figtree', 'Montserrat', sans-serif;
-}
-
-.subpage-title-container {
+/* === BOTTOM LINKS === */
+.bottom-links {
+  position: absolute;
+  bottom: 15%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5em;
-  margin-bottom: 2em;
-}
-
-.subpage-text {
-  font-size: 1.2rem;
-  font-weight: 300;
-  max-width: 700px;
-  margin: 0 auto 2em auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 7vw;
+  row-gap: 1em;
+  width: 100%;
+  max-width: 90vw;
   text-align: center;
 }
 
-.subpage-logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5em;
-  margin-bottom: 3em;
+.bottom-links a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 2s ease, color 0.3s ease;
 }
 
-.subpage-logo-grid img {
-  width: 20px;
-  height: auto;
-  opacity: 0.8;
+/* --- BOTTOM LINK HOVER GLOW EFFECTS --- */
+.bottom-links a:hover:nth-child(1) {
+  text-shadow: 0 0 16px #c849a7, 0 0 32px #c849a7, 0 0 48px #c849a7, 0 0 64px #c849a7, 0 0 80px #c849a7;
+}
+
+.bottom-links a:hover:nth-child(2) {
+  text-shadow: 0 0 16px #ffa300, 0 0 32px #ffa300, 0 0 48px #ffa300, 0 0 64px #ffa300, 0 0 80px #ffa300;
+}
+
+.bottom-links a:hover:nth-child(3) {
+  text-shadow: 0 0 16px #00f3fe, 0 0 32px #00f3fe, 0 0 48px #00f3fe, 0 0 64px #00f3fe, 0 0 80px #00f3fe;
 }
 
 .contact-info {
@@ -190,33 +140,19 @@ body.sub-page .sub-title {
   text-align: center;
 }
 
+#ml-bubble-img {
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  max-height: 25vh;
+  margin-top: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 10;
+}
+
+
 /* === MACHINE LEARNING PAGE === */
-/* === MACHINE LEARNING PAGE STYLES === */
-
-
-.sub-page .ml-subtitle {
-  font-size: clamp(1rem, 4vw + 1rem, 3rem); /* Scalable font size */
-  font-weight: 300;
-  line-height: 1;
-  position: relative;
-  top: -0.1em;
-  margin-left: 1rem;
-  flex-grow: 1;  /* Allow subtitle to take up remaining space */
-  flex-shrink: 1; /* Allow subtitle to shrink if necessary */
-}
-
-/* === LOGO CONTAINER (for ml.html only) === */
-/* === LOGO CONTAINER (for ml.html only) === */
-
-
-
-.ml-description {
-  font-size: 1rem;
-  font-weight: 300;
-  text-align: center;
-  margin-top: 20px;
-  border: 2px solid purple; /* Red outline */
-}
 
 /* === BACK ARROW === */
 .back-arrow {
@@ -244,283 +180,8 @@ body.sub-page .sub-title {
   text-decoration: underline;
 }
 
-/* === LOGO CONTAINER === */
-.logo-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  max-width: 41vw;
-  /* max-width: 90vw; */
 
 
-  margin: 2em auto 0 auto;
-
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
-  border: 2px solid yellow; /* Red outline */
-}
-
-.logo-container img {
-  height: 20px;
-  width: auto;
-  transition: transform 0.3s ease-in-out;
-  border: 2px solid lemonchiffon; /* Red outline */
-  /* height: auto;
-  width: clamp(60px, 8vw, 100px);
-  object-fit: contain; */
-}
-
-/* .logo-container img:hover {
-  transform: scale(1.1);
-} */
-
-/* === SPEECH BUBBLE === */
-#ml-bubble-img {
-  position: absolute;
-  top: 20%;
-  right: 15%;
-  max-height: 25vh;
-  margin-top: 0;
-  opacity: 0;
-  transition: opacity 1s ease;
-  z-index: 10;
-}
-
-/* === UTILITY === */
-.smaller-text {
-  font-size: 0.9rem;
-  font-weight: 300;
-  text-align: center;
-}
-
-/* === GLOBAL CONSTRAINTS === */
-/*
-.main-title-container,
-.ml-title-container,
-.ml-description,
-.logo-container {
-  min-width: 430px;
-}
-*/
-
-.ml-title,
-.ml-subtitle {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: clamp(1.5rem, 5vw, 3rem); /* Adjust as needed */
-  text-align: center;
-}
-
-
-.ml-content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2em;
-  width: 100%;
-  max-width: 1000px;
-  margin: 2em auto;
-  padding: 0 1em;
-  flex-wrap: wrap;
-  border: 2px solid red; /* Red outline */
-  width: 80%; /* Decreased width, adjust as needed */
-  max-width: 1000px; /* Optional: Set a maximum width for larger screens */
-}
-
-.ml-description {
-  flex: 1 1 45%;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 0;
-  white-space: normal;
-  overflow: visible;
-}
-
-
-
-.ml-subtitle {
-  font-size: clamp(1.5rem, 4vw + 1rem, 4rem); /* Scalable font size */
-  font-weight: 300;
-  line-height: 1;
-  margin-left: 1rem;
-}
-
-.ml-description {
-  font-size: clamp(1rem, 3vw + 0.5rem, 3rem); /* Scalable font size */
-  font-weight: 300;
-  line-height: 1;
-  margin-top: 20px;
-}
-
-
-
-
-
-
-
-
-
-/* === LOGO CONTAINER === */
-
-/*
-.ml-title,
-.ml-subtitle {
-  white-space: nowrap;
-}
-*/
-
-
-.ml-main {
-  margin-top: 1rem;
-  border: 2px solid blue; /* Red outline */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* === MACHINE LEARNING PAGE === */
-.sub-page .ml-title-container {
-  display: flex;
-  justify-content: center; /* Center the title */
-  width: 100%;
-  text-align: center;
-  gap: 0;
-  flex-direction: column; /* Stack the title and subtitle */
-  align-items: center; /* Ensure title and subtitle align center */
-}
-
-.sub-page .ml-title {
-  font-size: 5vw; /* Makes the font responsive to the container's width */
-  font-weight: 900;
-  line-height: 1;
-  text-align: center;
-  width: 100%; /* Ensure it takes full width available */
-  max-width: 100%; /* Prevent title from overflowing */
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Prevent text from overflowing with '...' */
-  display: inline-block; /* Make it fit within the container */
-  white-space: nowrap; /* Prevent wrapping */
-}
-
-.sub-page .ml-main {
-  font-size: 1.2em; /* Relative to .ml-title */
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 1rem;
-}
-
-.sub-page .ml-sub {
-  font-size: 0.6em; /* Smaller relative to .ml-title */
-  font-weight: 300;
-  font-family: 'Figtree', sans-serif;
-  margin-top: 0.5rem;
-  margin-left: 0.5em;
-}
-
-/* === MACHINE LEARNING DESCRIPTION === */
-.sub-page .ml-description {
-  font-size: 1rem;
-  font-weight: 300;
-  text-align: left;
-  margin-top: 20px;
-  width: 100%; /* Ensure it takes up space properly */
-  max-width: 80%; /* Restrict description width */
-}
-
-/* === LOGO CONTAINER === */
-.sub-page .logo-container {
-  display: flex;
-  justify-content: flex-end;  /* Align logos to the right */
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 41vw;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
-}
-
-
-
-
-.ml-main {
-  margin-top: 1rem;
-}
-
-
-
-
-
-
-.ml-title-container {
-  display: flex;
-  flex-direction: column; /* Stack the title and subtitle */
-  align-items: center; /* Ensure title and subtitle align center */
-  justify-content: center;
-  width: 100%;
-  gap: 0.5rem; /* Adjust space between title and subtitle */
-}
-
-.ml-title {
-  font-size: clamp(2rem, 5vw + 1rem, 5rem);
-  font-weight: 900;
-  line-height: 1;
-  text-align: center;
-  width: 100%; /* Make sure .ml-title occupies full available width */
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: block; /* Ensure title behaves as a block element */
-  flex-grow: 1; /* Allow the title to grow and take more space if needed */
-  border: 2px solid orange; /* Red outline */
-}
-
-.ml-sub {
-  font-size: clamp(1rem, 4vw + 1rem, 3rem); /* Scalable font size */
-  font-weight: 300;
-  line-height: 1;
-  text-align: center;
-  margin-left: 1rem;
-  margin-top: 0.5rem;
-  flex-grow: 0; /* Subtitle should not take additional space */
-  flex-shrink: 0; /* Subtitle should not shrink */
-}
-
-
-
-#ml-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  max-width: 100vw;
-  padding: 0 1rem;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-#ml-main,
-#ml-sub {
-  white-space: nowrap; /* prevent wrapping */
-  font-size: clamp(1rem, 6vw, 4rem); /* auto-scaling */
-  line-height: 1.1;
-}
 
 
 

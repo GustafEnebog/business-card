@@ -1,0 +1,190 @@
+/* Global Styles and Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(235, 238, 243, 1) 100%);
+  font-size: clamp(1rem, 2.5vw + 0.5rem, 1.25rem);
+}
+
+/* Common Flexbox Layouts */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus {
+  outline: 2px solid #4d90fe;
+}
+
+/* Transitions and Hover Effects */
+a:hover,
+a:focus {
+  color: #4d90fe;
+  transition: color 0.3s ease;
+}
+
+/* Buttons */
+button {
+  background-color: #4d90fe;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #357ae8;
+}
+
+/* Responsive font size and scaling */
+h1, h2, h3, h4, h5, h6 {
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+  font-weight: 700;
+}
+
+
+/* Header and Title Section */
+#main-title {
+    text-align: center;
+    font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  }
+  
+  .sub-title {
+    font-size: clamp(1.5rem, 3vw + 1rem, 2rem);
+    color: #666;
+    text-align: center;
+  }
+  
+  /* Top Link Styles */
+  .top-link {
+    display: inline-block;
+    padding: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .top-link:hover {
+    background-color: #4d90fe;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Bottom Link Styles */
+  .bottom-link {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInBottomLinks 1.5s forwards;
+  }
+  
+  @keyframes fadeInBottomLinks {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .bottom-link:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Page Overlay and Iframe Transitions */
+  .page-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  iframe {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  
+  /* ML Page Layout */
+.ml-page-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
+  .ml-description {
+    font-size: clamp(1rem, 2.5vw + 0.5rem, 1.5rem);
+    line-height: 1.5;
+    margin-top: 20px;
+    max-width: 60%;
+  }
+  
+  .logo-container {
+    max-width: 35vw;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .ml-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+  
+  .ml-footer .contact-info {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .ml-footer .contact-info a {
+    color: #4d90fe;
+    text-decoration: none;
+  }
+  
+  .ml-footer .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
