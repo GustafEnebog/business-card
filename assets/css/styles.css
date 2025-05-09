@@ -180,7 +180,60 @@ body {
   text-decoration: underline;
 }
 
+.ml-title,
+.ml-description,
+.logo-container {
+  width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
+  max-width: 90vw;
+  margin: 0 auto;
+}
 
+.ml-title {
+  border: 2px solid red;
+}
+
+.ml-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* or center, depending on desired layout */
+  border: 2px solid orange;
+}
+
+
+.logo-container {
+  border: 2px solid blue;
+}
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 2px solid blue;
+  justify-content: flex-end;
+  /* ← aligns logos to the right */
+  align-items: center;
+  width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
+}
+
+.logo-container img {
+  display: inline-block;
+  /* or block */
+  vertical-align: middle;
+  transform: scale(1.1);
+  text-decoration: underline;
+  max-height: 20px;
+  margin: 4px;
+  /* optional spacing */
+}
+
+#ffa300 background: linear-gradient(to bottom, #555654 0%, #7a7c79 12.5%, #7a7c79 87.5%, #555654 100%);
+
+.sub-page-body {
+  background: linear-gradient(to bottom, #00cdda 0%, #00e9ff 12.5%, #00e9ff 87.5%, #00cdda 100%);
+  padding: 40px 20px;
+  font-family: 'Figtree', 'Montserrat', sans-serif;
+}
 
 
 
@@ -233,13 +286,16 @@ body {
     margin-top: -2vh;
   }
 
-  .logo-container {
-    max-width: 70vw;
+  .logo-container,
+  .ml-description,
+  .ml-title {
+    width: 80vw;
+    max-width: 80vw;
+    margin: 0 auto;
   }
-
 }
 
-/* Small mobile: below 576px */
+
 @media (max-width: 576px) {
   .top-links {
     top: 15%;
@@ -263,31 +319,45 @@ body {
     right: 10%;
   }
 
-  .logo-container {
-    max-width: 80vw;
-  }
-
 }
 
-/* Extra small: below 420px */
+
 @media (max-width: 420px) {
   .main-title-container {
     flex-direction: column;
     gap: 0;
     align-items: center;
+    width: 90vw;
+    /* Adjust width to ensure the container is responsive */
+    max-width: 90vw;
+    /* Ensure it doesn't exceed the viewport */
+    margin: 0 auto;
+    /* Center the container */
   }
 
-  .main-title-container,
-  .ml-title-container,
+  .ml-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ml-title,
   .ml-description,
   .logo-container {
-    min-width: auto;
+    width: 90vw;
+    max-width: 90vw;
+  }
+
+  .ml-description {
+    display: block;
+    text-align: left;
+    /* Optional: for alignment inside */
   }
 
   .logo-container {
-    max-width: 95vw;
+    justify-content: flex-end;
+    /* still aligns logos to the right inside container */
   }
-
 }
 
 /* Allow horizontal scroll ONLY on very small screens */
@@ -296,3 +366,6 @@ body {
     overflow-x: auto;
   }
 }
+
+
+#ffa300
