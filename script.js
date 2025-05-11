@@ -19,6 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem('cameFromSubpage', 'true');
     topLinks.forEach(link => link.classList.add('show'));
     bottomLinks.forEach(link => link.classList.add('show'));
+
+    // Show the "vanilla-ice-cone.png" after 3 seconds on the subpage
+    setTimeout(() => {
+      const imgWrapper = document.querySelector('.ml-wrapper');
+      if (imgWrapper && !document.getElementById('ice-cone-img')) {
+        const img = document.createElement('img');
+        img.src = '../assets/images/vanilla-ice.png';
+        img.alt = 'Vanilla Ice Cone';
+        img.id = 'vanilla-ice-cone-img';
+        img.style.opacity = '0'; // Initially hidden
+        imgWrapper.appendChild(img);
+
+        // Fade in the image after adding it
+        setTimeout(() => {
+          img.style.transition = 'opacity 1s';
+          img.style.opacity = '1'; // Fade in effect
+        }, 10);
+      }
+    }, 3000); // Delay for 3 seconds on the subpage
   }
 
   // Landing Page: handle fade-ins and image
@@ -50,14 +69,16 @@ document.addEventListener("DOMContentLoaded", function () {
           img.src = 'assets/images/speech-bubble-landing-page.png'; // Ensure the image path is correct
           img.alt = 'Machine Learning Collage';
           img.id = 'ml-bubble-img';
+          img.style.opacity = '0'; // Initially hidden
           wrapper.appendChild(img);
 
           // Fade in the image after adding it
           setTimeout(() => {
-            img.style.opacity = '1';
+            img.style.transition = 'opacity 1s';
+            img.style.opacity = '1'; // Fade in effect
           }, 10);
         }
       }
-    }, 10000);
+    }, 10000); // Delay for 10 seconds if no link is clicked
   }
 });

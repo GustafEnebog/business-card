@@ -253,6 +253,15 @@ body.ml-page {
   /* optional spacing */
 }
 
+#vanilla-ice-cone-img {
+  max-height: 25vh;
+  position: absolute;
+  bottom: 66%;
+  left: 30%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 10;
+}
 
 
 
@@ -337,6 +346,10 @@ body.ml-page {
   #ml-bubble-img {
     top: 36%;
     right: 10%;
+  }
+
+  .logo-container img {
+      max-height: 16px;
   }
 
 }
