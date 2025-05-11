@@ -153,6 +153,16 @@ body {
 
 
 /* === MACHINE LEARNING PAGE === */
+body.ml-page {
+  padding: 40px 20px;
+  font-family: 'Figtree', 'Montserrat', sans-serif;
+  /* background: linear-gradient(to bottom, #cc8400 0%, #ffa300 12.5%, #ffa300 87.5%, #cc8400 100%); */
+  /* background: linear-gradient(to bottom, #e66c00 0%, #ffa300 12.5%, #ffa300 87.5%, #e66c00 100%); */
+  /* background: linear-gradient(to bottom, #d88200 0%, #ffa300 12.5%, #ffa300 87.5%, #d88200 100%); */
+  /* background: linear-gradient(to bottom, #f25c00 0%, #ffa300 12.5%, #ffa300 87.5%, #f25c00 100%); */
+  /* background: linear-gradient(to bottom, #c97c00 0%, #ffa300 12.5%, #ffa300 87.5%, #c97c00 100%); */
+  background: linear-gradient(to bottom, #ffa300 0%, #ffae1a 50%, #ffa300 100%);
+}
 
 /* === BACK ARROW === */
 .back-arrow {
@@ -190,7 +200,7 @@ body {
 
 .ml-title {
   /* border: 2px solid red; */ 
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .ml-description {
@@ -201,7 +211,7 @@ body {
   text-align: left;
   /* ensures multi-line text inside children aligns left */
   /* border: 2px solid orange; */ 
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 
@@ -229,14 +239,6 @@ body {
   max-height: 20px;
   margin: 4px;
   /* optional spacing */
-}
-
-#ffa300 background: linear-gradient(to bottom, #555654 0%, #7a7c79 12.5%, #7a7c79 87.5%, #555654 100%);
-
-.sub-page-body {
-  background: linear-gradient(to bottom, #00cdda 0%, #00e9ff 12.5%, #00e9ff 87.5%, #00cdda 100%);
-  padding: 40px 20px;
-  font-family: 'Figtree', 'Montserrat', sans-serif;
 }
 
 
