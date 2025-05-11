@@ -236,7 +236,7 @@ body.ml-page {
   flex-wrap: wrap;
   gap: 8px;
   /* border: 2px solid blue; */
-  justify-content: flex-end;
+  justify-content: flex-end; /* flex-start; */
   /* ← aligns logos to the right */
   align-items: center;
   width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
@@ -263,6 +263,16 @@ body.ml-page {
   z-index: 10;
 }
 
+.logo-container img {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.logo-container img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
