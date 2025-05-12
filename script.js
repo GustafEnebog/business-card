@@ -18,29 +18,50 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem('cameFromSubpage', 'true');
     topLinks.forEach(link => link.classList.add('show'));
     bottomLinks.forEach(link => link.classList.add('show'));
-
-    // Show the vanilla ice cone image after 3 seconds
-    setTimeout(() => {
-      const imgWrapper = document.querySelector('.ml-wrapper');
-      if (imgWrapper && !document.getElementById('ice-cone-img')) {
-        const img = document.createElement('img');
-        img.src = '../assets/images/vanilla-ice.png';
-        img.alt = 'Vanilla Ice Cone';
-        img.id = 'vanilla-ice-cone-img';
-        img.style.opacity = '0';
-        imgWrapper.appendChild(img);
-
-        setTimeout(() => {
-          img.style.transition = 'opacity 1s';
-          img.style.opacity = '1';
-        }, 10);
-      }
-    }, 6000);
+  
+    // Determine the correct image based on the current page
+    const path = window.location.pathname;
+    let imageSrc = '';
+    let imageAlt = '';
+    let imageId = '';
+  
+    if (path.includes('ml.html')) {
+      imageSrc = '../assets/images/robot.png';
+      imageAlt = 'Robot';
+      imageId = 'robot-img';
+    } else if (path.includes('aero.html')) {
+      imageSrc = '../assets/images/airplane-drawing.png';
+      imageAlt = 'Airplane drawing';
+      imageId = 'airplane-drawing-img';
+    } else if (path.includes('fullstack.html')) {
+      imageSrc = '../assets/images/vanilla-ice.png';
+      imageAlt = 'Vanilla Ice Cone';
+      imageId = 'vanilla-ice-cone-img';
+    }
+  
+    if (imageSrc) {
+      setTimeout(() => {
+        const imgWrapper = document.querySelector('.ml-wrapper');
+        if (imgWrapper && !document.getElementById(imageId)) {
+          const img = document.createElement('img');
+          img.src = imageSrc;
+          img.alt = imageAlt;
+          img.id = imageId;
+          img.style.opacity = '0';
+          imgWrapper.appendChild(img);
+  
+          setTimeout(() => {
+            img.style.transition = 'opacity 1s';
+            img.style.opacity = '1';
+          }, 10);
+        }
+      }, 6000);
+    }
 
     // === Logo marching animation ===
     const logos = document.querySelectorAll('.logo-container img');
     const initialDelay = 1000; // Delay before the first logo appears
-    const logoDelay = 150;     // Delay between each logo
+    const logoDelay = 120;     // Delay between each logo
 
     setTimeout(() => {
       logos.forEach((logo, index) => {

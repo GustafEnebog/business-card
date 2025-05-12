@@ -291,6 +291,54 @@ body.aero-page {
   position: absolute;
 }
 
+#robot-img {
+
+
+  max-width: clamp(45px, 12vw, 70px);   /* Even smaller max width and earlier shrink */
+  max-height: clamp(60px, 20vh, 100px); /* Smaller and starts shrinking sooner */
+  width: auto;
+  height: auto;
+
+  /*height: auto;
+  height: clamp(60px, 20vh, 160px);
+  width: auto;
+  height: clamp(60px, 20vh, 160px); min, preferred, max height
+  position: absolute;
+  height: clamp(80px, 20vh, 180px);
+  position: absolute; */
+  top: 20%;
+  right: 60%;
+
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 10;
+  position: absolute;
+}
+
+#airplane-drawing-img {
+
+
+  max-width: clamp(45px, 12vw, 70px);   /* Even smaller max width and earlier shrink */
+  max-height: clamp(60px, 20vh, 100px); /* Smaller and starts shrinking sooner */
+  width: auto;
+  height: auto;
+
+  /*height: auto;
+  height: clamp(60px, 20vh, 160px);
+  width: auto;
+  height: clamp(60px, 20vh, 160px); min, preferred, max height
+  position: absolute;
+  height: clamp(80px, 20vh, 180px);
+  position: absolute; */
+  top: 20%;
+  right: 60%;
+
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 10;
+  position: absolute;
+}
+
 .logo-container img {
   opacity: 0;
   transform: translateY(10px);
