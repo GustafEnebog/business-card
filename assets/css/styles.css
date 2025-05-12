@@ -158,24 +158,18 @@ body.sub-page {
   font-family: 'Figtree', 'Montserrat', sans-serif;
 }
 
-body.ml-page {
-  /* background: linear-gradient(to bottom, #cc8400 0%, #ffa300 12.5%, #ffa300 87.5%, #cc8400 100%);
-  /* background: linear-gradient(to bottom, #e66c00 0%, #ffa300 12.5%, #ffa300 87.5%, #e66c00 100%);
-  /* background: linear-gradient(to bottom, #d88200 0%, #ffa300 12.5%, #ffa300 87.5%, #d88200 100%);
-  /* background: linear-gradient(to bottom, #f25c00 0%, #ffa300 12.5%, #ffa300 87.5%, #f25c00 100%);
-  /* background: linear-gradient(to bottom, #c97c00 0%, #ffa300 12.5%, #ffa300 87.5%, #c97c00 100%); */
-  background: linear-gradient(to bottom, #ffa300 0%, #ffae1a 50%, #ffa300 100%);
-  /* background: linear-gradient(to bottom, #c600cc 0%, #f300ff 12.5%, #f300ff 87.5%, #c600cc 100%);*/
+body.fullstack-page {
+  background: linear-gradient(to bottom, #c600cc 0%, #f300ff 12.5%, #f300ff 87.5%, #c600cc 100%);
   /* background: linear-gradient(to bottom, #cc00c9 0%, #ff00fc 12.5%, #ff00fc 87.5%, #cc00c9 100%);*/
-
-  /* background: linear-gradient(to bottom, #00aac7 0%, #00d8ff 12.5%, #00d8ff 87.5%, #00aac7 100%);
-  background: linear-gradient(to bottom, #009fc7 0%, #00c7ff 12.5%, #00c7ff 87.5%, #009fc7 100%);
-  background: linear-gradient(to bottom, #0077cc 0%, #3399dd 50%, #0077cc 100%); 
-  /* background: linear-gradient(to bottom, #336699 0%, #4d88aa 50%, #336699 100%);*/
-
-
 }
 
+body.ml-page {
+  background: linear-gradient(to bottom, #ffa300 0%, #ffae1a 50%, #ffa300 100%);
+}
+
+body.aero-page {
+  background: linear-gradient(to bottom, #00d9ff 0%, #78e4ff 50%, #00d9ff 100%);
+}
 /* === BACK ARROW === */
 .back-arrow {
   position: absolute;
