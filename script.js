@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // === Logo marching animation ===
     const logos = document.querySelectorAll('.logo-container img');
     const initialDelay = 1000; // Delay before the first logo appears
-    const logoDelay = 200;     // Delay between each logo
+    const logoDelay = 150;     // Delay between each logo
 
     setTimeout(() => {
       logos.forEach((logo, index) => {

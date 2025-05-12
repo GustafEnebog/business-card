@@ -254,13 +254,27 @@ body.ml-page {
 }
 
 #vanilla-ice-cone-img {
-  max-height: 25vh;
+
+
+  max-width: clamp(45px, 12vw, 70px);   /* Even smaller max width and earlier shrink */
+  max-height: clamp(60px, 20vh, 100px); /* Smaller and starts shrinking sooner */
+  width: auto;
+  height: auto;
+
+  /*height: auto;
+  height: clamp(60px, 20vh, 160px);
+  width: auto;
+  height: clamp(60px, 20vh, 160px); min, preferred, max height
   position: absolute;
-  bottom: 66%;
-  left: 30%;
+  height: clamp(80px, 20vh, 180px);
+  position: absolute; */
+  top: 20%;
+  right: 60%;
+
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
+  position: absolute;
 }
 
 .logo-container img {
