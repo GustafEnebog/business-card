@@ -110,17 +110,37 @@ body {
 }
 
 /* --- BOTTOM LINK HOVER GLOW EFFECTS --- */
+
 .bottom-links a:hover:nth-child(1) {
-  text-shadow: 0 0 16px #c849a7, 0 0 32px #c849a7, 0 0 48px #c849a7, 0 0 64px #c849a7, 0 0 80px #c849a7;
+  text-shadow:
+    0 0 4px #f752ff,
+    0 0 8px #f752ff,
+    0 0 16px #f752ff,
+    0 0 24px #f752ff,
+    0 0 32px #f752ff,
+    0 0 40px #f752ff;
 }
 
 .bottom-links a:hover:nth-child(2) {
-  text-shadow: 0 0 16px #ffa300, 0 0 32px #ffa300, 0 0 48px #ffa300, 0 0 64px #ffa300, 0 0 80px #ffa300;
+  text-shadow:
+    0 0 4px #ffa300,
+    0 0 8px #ffa300,
+    0 0 16px #ffa300,
+    0 0 24px #ffa300,
+    0 0 32px #ffa300,
+    0 0 40px #ffa300;
 }
 
 .bottom-links a:hover:nth-child(3) {
-  text-shadow: 0 0 16px #00f3fe, 0 0 32px #00f3fe, 0 0 48px #00f3fe, 0 0 64px #00f3fe, 0 0 80px #00f3fe;
+  text-shadow:
+    0 0 4px #00d9ff,
+    0 0 8px #00d9ff,
+    0 0 16px #00d9ff,
+    0 0 24px #00d9ff,
+    0 0 32px #00d9ff,
+    0 0 40px #00d9ff;
 }
+
 
 .contact-info {
   text-align: center;
