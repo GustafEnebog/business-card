@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="799.59827"
+   height="204.76685"
+   viewBox="0 0 799.59825 204.76684"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="aerospace-engineer-stack.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.57848045"
+     inkscape:cx="667.26542"
+     inkscape:cy="-238.55603"
+     inkscape:window-width="1902"
+     inkscape:window-height="973"
+     inkscape:window-x="582"
+     inkscape:window-y="63"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="157.13171"
+       y="314.26346"
+       width="3187.9597"
+       height="292.66058"
+       id="rect236" />
+    <rect
+       x="157.13171"
+       y="314.26346"
+       width="3187.9597"
+       height="292.66058"
+       id="rect236-1" />
+    <rect
+       x="157.13171"
+       y="314.26346"
+       width="3187.9597"
+       height="292.66058"
+       id="rect236-0" />
+    <rect
+       x="157.13171"
+       y="314.26346"
+       width="3187.9597"
+       height="292.66058"
+       id="rect236-0-8" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-268.8767,-491.16309)">
+    <text
+       xml:space="preserve"
+       id="text234-6"
+       style="font-size:133.333px;font-family:'LEMON MILK';-inkscape-font-specification:'LEMON MILK';text-align:center;white-space:pre;shape-inside:url(#rect236-0);display:inline;fill:#000000;stroke-width:0.755906"
+       x="-1011.9976"
+       y="0"
+       transform="translate(110.81251,146.37873)"><tspan
+         x="157.13086"
+         y="439.71745"
+         id="tspan872"><tspan
+           style="font-weight:900;font-family:Figtree;-inkscape-font-specification:'Figtree Heavy';text-align:start"
+           id="tspan870">AEROSPACE</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text234-6-9"
+       style="font-size:133.333px;font-family:'LEMON MILK';-inkscape-font-specification:'LEMON MILK';text-align:center;white-space:pre;shape-inside:url(#rect236-0-8);display:inline;fill:#000000;stroke-width:0.755906"
+       x="-1011.9976"
+       y="0"
+       transform="translate(261.24492,255.01249)"><tspan
+         x="157.13086"
+         y="439.71745"
+         id="tspan876"><tspan
+           style="font-weight:300;font-size:100px;font-family:Figtree;-inkscape-font-specification:'Figtree Light';text-align:start"
+           id="tspan874">ENGINEER</tspan></tspan></text>
+  </g>
+</svg>
