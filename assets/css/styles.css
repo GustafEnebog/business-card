@@ -159,8 +159,7 @@ body.sub-page {
 }
 
 body.fullstack-page {
-  background: linear-gradient(to bottom, #c600cc 0%, #f300ff 12.5%, #f300ff 87.5%, #c600cc 100%);
-  /* background: linear-gradient(to bottom, #cc00c9 0%, #ff00fc 12.5%, #ff00fc 87.5%, #cc00c9 100%);*/
+  background: linear-gradient(to bottom, #f752ff 0%, #fc8bff 50%, #f752ff 100%);
 }
 
 body.ml-page {
@@ -170,6 +169,7 @@ body.ml-page {
 body.aero-page {
   background: linear-gradient(to bottom, #00d9ff 0%, #78e4ff 50%, #00d9ff 100%);
 }
+
 /* === BACK ARROW === */
 .back-arrow {
   position: absolute;
