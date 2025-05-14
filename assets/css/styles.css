@@ -8,7 +8,15 @@
 body {
   font-family: 'Figtree', 'Montserrat', sans-serif;
   height: 100vh;
-  background: linear-gradient(to bottom, #555654 0%, #7a7c79 12.5%, #7a7c79 87.5%, #555654 100%);
+  /* background: linear-gradient(to bottom, #555654 0%, #7a7c79 12.5%, #7a7c79 87.5%, #555654 100%);
+  background: linear-gradient(to bottom, #6b6c6a 0%, #8f918e 12.5%, #8f918e 87.5%, #6b6c6a 100%);
+  background: linear-gradient(to bottom, #858684 0%, #a9aba8 12.5%, #a9aba8 87.5%, #858684 100%);
+  background: linear-gradient(to bottom, #a2a3a1 0%, #c5c6c4 12.5%, #c5c6c4 87.5%, #a2a3a1 100%);
+  background: linear-gradient(to bottom, #a6a29d 0%, #c9c5c0 12.5%, #c9c5c0 87.5%, #a6a29d 100%);
+  background: linear-gradient(to bottom, #a8a28f 0%, #cdc7b4 12.5%, #cdc7b4 87.5%, #a8a28f 100%);
+  background: linear-gradient(to bottom, #a6a49d 0%, #c9c7c0 12.5%, #c9c7c0 87.5%, #a6a49d 100%); */
+  background: linear-gradient(to bottom, #a6a49d 0%, #c9c7c0 12.5%, #c9c7c0 87.5%, #a6a49d 100%);
+
   color: black;
   display: flex;
   flex-direction: column;
