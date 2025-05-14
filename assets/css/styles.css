@@ -233,7 +233,7 @@ body.aero-page {
 /* === SUBPAGE NAV === */
 .subpage-nav {
   position: absolute;
-  bottom: 15%;
+  top: calc(49vh - 102px); /* 34%; */
   left: 20px;
   display: flex;
   flex-direction: column;
@@ -453,6 +453,13 @@ body.aero-page {
 
 /* === MEDIA QUERIES === */
 
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .ml-title {
+    top: 38%;
+  }
+}
+
 /* Medium screens: 855px–880px */
 @media (max-width: 880px) and (min-width: 855px) {
   .bottom-links {
@@ -505,6 +512,9 @@ body.aero-page {
     margin-right: auto;
   }
 
+  .ml-title {
+    top: 42%;
+  }
 }
 
 
@@ -573,6 +583,10 @@ body.aero-page {
   .logo-container {
     justify-content: flex-end;
     /* still aligns logos to the right inside container */
+  }
+
+  .ml-title {
+    top: 46%;
   }
 }
 
