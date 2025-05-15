@@ -401,28 +401,21 @@ body.aero-page {
   position: absolute;
 }
 
-#robot-img {
-
-
-  max-width: clamp(45px, 12vw, 70px);   /* Even smaller max width and earlier shrink */
-  max-height: clamp(60px, 20vh, 100px); /* Smaller and starts shrinking sooner */
+.robot-img {
+  max-width: clamp(45px, 12vw, 70px);
+  max-height: clamp(60px, 20vh, 100px);
   width: auto;
   height: auto;
-
-  /*height: auto;
-  height: clamp(60px, 20vh, 160px);
-  width: auto;
-  height: clamp(60px, 20vh, 160px); min, preferred, max height
-  position: absolute;
-  height: clamp(80px, 20vh, 180px);
-  position: absolute; */
-  top: 20%;
-  right: 60%;
-
+  top: -100px;    /* 20px above the top edge of .ml-wrapper */
+  left: 30px;  /* 30px outside the right edge of .ml-wrapper */
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
   position: absolute;
+}
+
+.ml-wrapper {
+  position: relative;
 }
 
 #airplane-drawing-img {

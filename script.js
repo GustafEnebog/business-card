@@ -18,50 +18,70 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem('cameFromSubpage', 'true');
     topLinks.forEach(link => link.classList.add('show'));
     bottomLinks.forEach(link => link.classList.add('show'));
-  
-    // Determine the correct image based on the current page
+
     const path = window.location.pathname;
-    let imageSrc = '';
-    let imageAlt = '';
-    let imageId = '';
-  
+
     if (path.includes('ml.html')) {
-      imageSrc = '../assets/images/robot.png';
-      imageAlt = 'Robot';
-      imageId = 'robot-img';
-    } else if (path.includes('aero.html')) {
-      imageSrc = '../assets/images/airplane-drawing.png';
-      imageAlt = 'Airplane drawing';
-      imageId = 'airplane-drawing-img';
-    } else if (path.includes('fullstack.html')) {
-      imageSrc = '../assets/images/vanilla-ice.png';
-      imageAlt = 'Vanilla Ice Cone';
-      imageId = 'vanilla-ice-cone-img';
-    }
-  
-    if (imageSrc) {
       setTimeout(() => {
         const imgWrapper = document.querySelector('.ml-wrapper');
-        if (imgWrapper && !document.getElementById(imageId)) {
-          const img = document.createElement('img');
-          img.src = imageSrc;
-          img.alt = imageAlt;
-          img.id = imageId;
-          img.style.opacity = '0';
-          imgWrapper.appendChild(img);
-  
+        if (!imgWrapper) return;
+
+        // Create and add the first image (no bubble)
+        // Create and add the first image (no bubble)
+        const firstImg = document.createElement('img');
+        firstImg.src = '../assets/images/ml-robot-no-bubble.png';
+        firstImg.alt = 'Robot No Bubble';
+        firstImg.classList.add('robot-img');
+        firstImg.style.opacity = '0';
+        firstImg.style.transition = 'opacity 1s';
+
+        imgWrapper.appendChild(firstImg);
+
+        // Fade in the first image
+        setTimeout(() => {
+          firstImg.style.opacity = '1';
+        }, 10);
+
+        // After 1 second, replace with the second image (with bubble)
+        setTimeout(() => {
+          const secondImg = document.createElement('img');
+          secondImg.src = '../assets/images/robot.png';
+          secondImg.alt = 'Robot';
+          secondImg.classList.add('robot-img');
+          secondImg.style.opacity = '0';
+          secondImg.style.transition = 'opacity 1s';
+
+          imgWrapper.appendChild(secondImg);
+
+          // Fade in second image
           setTimeout(() => {
-            img.style.transition = 'opacity 1s';
-            img.style.opacity = '1';
+            secondImg.style.opacity = '1';
           }, 10);
-        }
-      }, 6000);
+
+          // Remove first image after fade
+          setTimeout(() => {
+            if (firstImg.parentElement) {
+              imgWrapper.removeChild(firstImg);
+            }
+          }, 1000);
+
+        }, 1000);
+
+
+      }, 6000); // Start 6 seconds after page load
     }
+
+
+
+
+
+
+
 
     // === Logo marching animation ===
     const logos = document.querySelectorAll('.logo-container img');
     const initialDelay = 1000; // Delay before the first logo appears
-    const logoDelay = 120;     // Delay between each logo
+    const logoDelay = 120; // Delay between each logo
 
     setTimeout(() => {
       logos.forEach((logo, index) => {
