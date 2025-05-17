@@ -402,11 +402,11 @@ body.aero-page {
 }
 
 .robot-img {
-  max-width: clamp(45px, 12vw, 70px);
-  max-height: clamp(60px, 20vh, 100px);
+  max-width: clamp(60px, 20vw, 120px);
+  max-height: clamp(60px, 20vh, 120px);
   width: auto;
   height: auto;
-  top: -100px;    /* 20px above the top edge of .ml-wrapper */
+  top: -116px;    /* 20px above the top edge of .ml-wrapper */
   left: 30px;  /* 30px outside the right edge of .ml-wrapper */
   opacity: 0;
   transition: opacity 1s ease;
@@ -594,11 +594,25 @@ body.aero-page {
   .ml-title {
     top: 46%;
   }
+
+  .robot-img {
+    top: -28%; /* -102px;   20px above the top edge of .ml-wrapper */
+    left: 18px;  /* 30px outside the right edge of .ml-wrapper */
+  }
+
+  .top-links {
+    top: 10%;
+  }
 }
 
 /* Allow horizontal scroll ONLY on very small screens */
 @media (max-width: 359px) {
   body {
     overflow-x: auto;
+  }
+
+  .robot-img {
+    top: -80px;    /* 20px above the top edge of .ml-wrapper */
+    left: 70vw;  /* 30px outside the right edge of .ml-wrapper */
   }
 }
