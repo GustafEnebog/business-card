@@ -7,7 +7,8 @@
 
 body {
   font-family: 'Figtree', 'Montserrat', sans-serif;
-  min-height: 100dvh; /* modern browsers support this better */
+  min-height: 100dvh;
+  /* modern browsers support this better */
   height: auto;
   background: linear-gradient(to bottom, #a6a49d 0%, #c9c7c0 12.5%, #c9c7c0 87.5%, #a6a49d 100%);
 
@@ -21,8 +22,7 @@ body {
   position: relative;
 }
 
-/=== TOP * LINKS === */
-.top-links {
+/===TOP * LINKS===*/ .top-links {
   position: absolute;
   top: 15%;
   display: flex;
@@ -218,7 +218,7 @@ body.aero-page {
   gap: 4vw;
   justify-content: center;
   width: 100%;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #sub-page-top-links a {
@@ -328,7 +328,7 @@ body.aero-page {
   width: 100%;
   font-size: 1rem;
   font-weight: 300;
-      margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .subpage-nav a {
@@ -608,20 +608,48 @@ body.aero-page {
     max-height: 16px;
   }
 
-   .subpage-nav {
+  .subpage-nav {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Optional: centers the links */
-    gap: 0.5rem; /* Optional: adds spacing between links */
-    position: relative; /* To override any absolute positioning context */
+    align-items: center;
+    /* Optional: centers the links */
+    gap: 0.2rem;
+    /* Optional: adds spacing between links */
+    position: relative;
+    /* To override any absolute positioning context */
+    margin-top: 4rem;
   }
 
   .subpage-nav .left-link,
   .subpage-nav .right-link {
-    position: static; /* Removes absolute positioning */
-    width: auto; /* Optional: reset any width settings */
+    position: static;
+    /* Removes absolute positioning */
+    width: auto;
+    /* Optional: reset any width settings */
   }
-  
+
+  .contact-info {
+    margin-top: 3vh;
+  }
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .main-title-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+    /* or your page background */
+  }
+
+  .main-title-wrapper {
+    position: sticky;
+    top: 0;
+  }
+
 }
 
 
@@ -662,6 +690,16 @@ body.aero-page {
     /* still aligns logos to the right inside container */
   }
 
+  body {
+    border: 5px solid red;
+  }
+
+  .ml-wrapper {
+    /* padding-top: 100px;
+    display: block; */
+    position: relative;
+    margin-top: 15vh;
+  }
 }
 
 /* Allow horizontal scroll ONLY on very small screens */
