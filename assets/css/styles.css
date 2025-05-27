@@ -7,14 +7,8 @@
 
 body {
   font-family: 'Figtree', 'Montserrat', sans-serif;
-  height: 100vh;
-  /* background: linear-gradient(to bottom, #555654 0%, #7a7c79 12.5%, #7a7c79 87.5%, #555654 100%);
-  background: linear-gradient(to bottom, #6b6c6a 0%, #8f918e 12.5%, #8f918e 87.5%, #6b6c6a 100%);
-  background: linear-gradient(to bottom, #858684 0%, #a9aba8 12.5%, #a9aba8 87.5%, #858684 100%);
-  background: linear-gradient(to bottom, #a2a3a1 0%, #c5c6c4 12.5%, #c5c6c4 87.5%, #a2a3a1 100%);
-  background: linear-gradient(to bottom, #a6a29d 0%, #c9c5c0 12.5%, #c9c5c0 87.5%, #a6a29d 100%);
-  background: linear-gradient(to bottom, #a8a28f 0%, #cdc7b4 12.5%, #cdc7b4 87.5%, #a8a28f 100%);
-  background: linear-gradient(to bottom, #a6a49d 0%, #c9c7c0 12.5%, #c9c7c0 87.5%, #a6a49d 100%); */
+  min-height: 100dvh; /* modern browsers support this better */
+  height: auto;
   background: linear-gradient(to bottom, #a6a49d 0%, #c9c7c0 12.5%, #c9c7c0 87.5%, #a6a49d 100%);
 
   color: black;
@@ -27,7 +21,7 @@ body {
   position: relative;
 }
 
-/* === TOP LINKS === */
+/=== TOP * LINKS === */
 .top-links {
   position: absolute;
   top: 15%;
@@ -52,7 +46,6 @@ body {
   font-weight: 600;
   color: black;
 }
-
 
 .top-links a.show,
 .bottom-links a.show {
@@ -186,11 +179,6 @@ body.aero-page {
   position: relative;
 }
 
-/* === SUB PAGE TOP LINKS === */
-#sub-page-top-links {
-  /*  margin-bottom: 20px; */
-}
-
 /* === BACK ARROW === */
 .back-arrow {
   position: absolute;
@@ -217,9 +205,53 @@ body.aero-page {
   text-decoration: underline;
 }
 
+
+
+
+
+
+/*=== TOP LINKS === */
+#sub-page-top-links {
+  /* position: absolute;*/
+  top: 15%;
+  display: flex;
+  gap: 4vw;
+  justify-content: center;
+  width: 100%;
+    margin-bottom: 20px;
+}
+
+#sub-page-top-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #222;
+  font-weight: 300;
+  opacity: 0;
+  visibility: visible;
+  display: inline-block;
+  transition: color 0.3s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#sub-page-top-links a:hover {
+  font-weight: 600;
+  color: black;
+}
+
+#sub-page-top-links a.show,
+.bottom-links a.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
 /* === ML TITLE === */
 .ml-title {
-  /* border: 2px solid red; */ 
   margin-bottom: 15px;
 }
 
@@ -228,21 +260,24 @@ body.aero-page {
   /* ensures children align left */
   text-align: left;
   /* ensures multi-line text inside children aligns left */
-  /* border: 2px solid orange; */ 
-  margin-bottom: 50px;
+  /* border: 2px solid orange; */
+  margin-bottom: 1rem;
 }
 
 /* === LINK TO EXTRERNAL STUFF LIKE AIRPLANE PREDICTOR FOR EXAMPLE === */
 .custom-link {
-  color: inherit; /* Keeps it the same color as the surrounding text */
+  color: inherit;
+  /* Keeps it the same color as the surrounding text */
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 2px solid transparent; /* For a smoother underline effect */
+  border-bottom: 2px solid transparent;
+  /* For a smoother underline effect */
   transition: border-color 0.2s ease;
 }
 
 .custom-link:hover {
-  border-color: currentColor; /* Underline with same color as text on hover */
+  border-color: currentColor;
+  /* Underline with same color as text on hover */
   cursor: pointer;
 }
 
@@ -257,8 +292,8 @@ body.aero-page {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  /* border: 2px solid blue; */
-  justify-content: flex-end; /* flex-start; */
+  justify-content: flex-end;
+  /* flex-start; */
   /* ← aligns logos to the right */
   align-items: center;
   width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
@@ -282,19 +317,25 @@ body.aero-page {
 .logo-container {
   width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
   max-width: 90vw;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 /* === SUBPAGE NAV === */
 
 .subpage-nav {
   position: relative;
-  padding: 0 5vw;
+
   width: 100%;
   font-size: 1rem;
   font-weight: 300;
-  margin-top: 50px; 
-  margin-bottom: 2rem;
+      margin-top: 3rem;
+}
+
+.subpage-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  flex: 1 1 45%;
 }
 
 .subpage-nav .left-link {
@@ -379,10 +420,10 @@ body.aero-page {
 .contact-info {
   display: flex;
   justify-content: center;
-  margin-top: 1.5rem;
-  padding: 1rem 0;
+  /* padding: 1rem 0;*/
   text-align: center;
   width: 100%;
+  margin-top: 12vh;
 }
 
 .contact-info .smaller-text {
@@ -392,15 +433,17 @@ body.aero-page {
 }
 
 .lowered-contact {
-  margin-top: 3rem; /* Adjust this value as needed */
+  /* Adjust this value as needed */
 }
 
 /* === SUB PAGE IMAGES === */
 #vanilla-ice-cone-img {
 
 
-  max-width: clamp(45px, 12vw, 70px);   /* Even smaller max width and earlier shrink */
-  max-height: clamp(60px, 20vh, 100px); /* Smaller and starts shrinking sooner */
+  max-width: clamp(45px, 12vw, 70px);
+  /* Even smaller max width and earlier shrink */
+  max-height: clamp(60px, 20vh, 100px);
+  /* Smaller and starts shrinking sooner */
   width: auto;
   height: auto;
 
@@ -425,9 +468,11 @@ body.aero-page {
   max-height: clamp(60px, 24vh, 120px);
   width: auto;
   height: auto;
-  top: calc(0vh - 110px); /* calc(49vh - 102px)  calc(10vh - 175px)*/
+  top: calc(0vh - 66px);
+  /* calc(49vh - 102px)  calc(10vh - 175px)*/
   /* top: 20vh;  -111px;    20px above the top edge of .ml-wrapper */
-  left: 3vw; /* 33px;   30px outside the right edge of .ml-wrapper */
+  left: 3.5vw;
+  /* 33px;   30px outside the right edge of .ml-wrapper */
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
@@ -437,8 +482,10 @@ body.aero-page {
 #airplane-drawing-img {
 
 
-  max-width: clamp(45px, 12vw, 70px);   /* Even smaller max width and earlier shrink */
-  max-height: clamp(60px, 20vh, 100px); /* Smaller and starts shrinking sooner */
+  max-width: clamp(45px, 12vw, 70px);
+  /* Even smaller max width and earlier shrink */
+  max-height: clamp(60px, 20vh, 100px);
+  /* Smaller and starts shrinking sooner */
   width: auto;
   height: auto;
 
@@ -558,9 +605,23 @@ body.aero-page {
   }
 
   .logo-container img {
-      max-height: 16px;
+    max-height: 16px;
   }
 
+   .subpage-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Optional: centers the links */
+    gap: 0.5rem; /* Optional: adds spacing between links */
+    position: relative; /* To override any absolute positioning context */
+  }
+
+  .subpage-nav .left-link,
+  .subpage-nav .right-link {
+    position: static; /* Removes absolute positioning */
+    width: auto; /* Optional: reset any width settings */
+  }
+  
 }
 
 
