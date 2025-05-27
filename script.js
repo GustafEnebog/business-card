@@ -42,30 +42,30 @@ document.addEventListener("DOMContentLoaded", function () {
           firstImg.style.opacity = '1';
         }, 10);
 
-        // After 1 second, replace with the second image (with bubble)
+        // After 3 second, replace with the second image (with bubble)
         setTimeout(() => {
           const secondImg = document.createElement('img');
           secondImg.src = '../assets/images/robot.png';
           secondImg.alt = 'Robot';
           secondImg.classList.add('robot-img');
           secondImg.style.opacity = '0';
-          secondImg.style.transition = 'opacity 1s';
+          secondImg.style.transition = 'opacity 3s';
 
           imgWrapper.appendChild(secondImg);
 
           // Fade in second image
           setTimeout(() => {
             secondImg.style.opacity = '1';
-          }, 10);
+          }, 30);
 
           // Remove first image after fade
           setTimeout(() => {
             if (firstImg.parentElement) {
               imgWrapper.removeChild(firstImg);
             }
-          }, 1000);
+          }, 3000);
 
-        }, 1000);
+        }, 3000);
 
 
       }, 6000); // Start 6 seconds after page load

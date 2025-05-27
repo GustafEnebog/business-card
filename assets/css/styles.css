@@ -150,24 +150,9 @@ body {
 }
 
 
-.contact-info {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-top: 2em;
-}
 
-.contact-info p {
-  font-size: 1rem;
-}
 
-.lowered-contact {
-  position: absolute;
-  bottom: 15%;
-  width: 100%;
-  text-align: center;
-}
-
+/* === SPEECH BUBBLE === */
 #ml-bubble-img {
   position: absolute;
   top: 20%;
@@ -179,11 +164,9 @@ body {
   z-index: 10;
 }
 
-
-/* === MACHINE LEARNING PAGE === */
+/* =============== SUB PAGES ============ */
 body.sub-page {
   padding: 40px 20px;
-  font-family: 'Figtree', 'Montserrat', sans-serif;
 }
 
 body.fullstack-page {
@@ -198,8 +181,15 @@ body.aero-page {
   background: linear-gradient(to bottom, #00d9ff 0%, #78e4ff 50%, #00d9ff 100%);
 }
 
+/* === ML WRAPPER === */
+.ml-wrapper {
+  position: relative;
+}
 
-
+/* === SUB PAGE TOP LINKS === */
+#sub-page-top-links {
+  /*  margin-bottom: 20px; */
+}
 
 /* === BACK ARROW === */
 .back-arrow {
@@ -227,26 +217,102 @@ body.aero-page {
   text-decoration: underline;
 }
 
+/* === ML TITLE === */
+.ml-title {
+  /* border: 2px solid red; */ 
+  margin-bottom: 15px;
+}
 
+/* === DESCRIPTION === */
+.ml-description {
+  /* ensures children align left */
+  text-align: left;
+  /* ensures multi-line text inside children aligns left */
+  /* border: 2px solid orange; */ 
+  margin-bottom: 50px;
+}
 
+/* === LINK TO EXTRERNAL STUFF LIKE AIRPLANE PREDICTOR FOR EXAMPLE === */
+.custom-link {
+  color: inherit; /* Keeps it the same color as the surrounding text */
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent; /* For a smoother underline effect */
+  transition: border-color 0.2s ease;
+}
+
+.custom-link:hover {
+  border-color: currentColor; /* Underline with same color as text on hover */
+  cursor: pointer;
+}
+
+/* === LOGOS === */
+
+.logo-container img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  /* border: 2px solid blue; */
+  justify-content: flex-end; /* flex-start; */
+  /* ← aligns logos to the right */
+  align-items: center;
+  width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
+}
+
+.logo-container img {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: underline;
+  max-height: 20px;
+  margin: 4px;
+  opacity: 0;
+  transform: scale(1.1) translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* === TOP LINKS, DESCRIPTION AND LOGOS === */
+
+.ml-title,
+.ml-description,
+.logo-container {
+  width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
+  max-width: 90vw;
+  margin: 0 auto;
+}
 
 /* === SUBPAGE NAV === */
+
 .subpage-nav {
-  position: absolute;
-  top: calc(49vh - 102px); /* 34%; */
-  left: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* ← This ensures left alignment */
-  gap: 5px;
-  z-index: 999;
+  position: relative;
+  padding: 0 5vw;
+  width: 100%;
   font-size: 1rem;
   font-weight: 300;
+  margin-top: 50px; 
+  margin-bottom: 2rem;
+}
+
+.subpage-nav .left-link {
+  position: absolute;
+  left: 0;
+
+}
+
+.subpage-nav .right-link {
+  position: absolute;
+  right: 0;
 }
 
 .subpage-nav a {
-  color: black;
+  display: inline-block;
+  border-radius: 4px;
   text-decoration: none;
+  color: black;
 }
 
 .ml-page .subpage-nav a:hover:nth-child(1) {
@@ -309,74 +375,27 @@ body.aero-page {
     0 0 40px #ffa300;
 }
 
-
-
-
-
-.ml-title,
-.ml-description,
-.logo-container {
-  width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
-  max-width: 90vw;
-  margin: 0 auto;
-}
-
-.ml-title {
-  /* border: 2px solid red; */ 
-  margin-bottom: 15px;
-}
-
-.ml-description {
-  /* ensures children align left */
-  text-align: left;
-  /* ensures multi-line text inside children aligns left */
-  /* border: 2px solid orange; */ 
-  margin-bottom: 30px;
-}
-
-.nowrap {
-  white-space: nowrap;
-}
-
-.custom-link {
-  color: inherit; /* Keeps it the same color as the surrounding text */
-  font-weight: bold;
-  text-decoration: none;
-  border-bottom: 2px solid transparent; /* For a smoother underline effect */
-  transition: border-color 0.2s ease;
-}
-
-.custom-link:hover {
-  border-color: currentColor; /* Underline with same color as text on hover */
-  cursor: pointer;
-}
-
-.logo-container {
-  /* border: 2px solid blue; */ 
-}
-
-.logo-container {
+/* === CONTACT INFO === */
+.contact-info {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  /* border: 2px solid blue; */
-  justify-content: flex-end; /* flex-start; */
-  /* ← aligns logos to the right */
-  align-items: center;
-  width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
 }
 
-.logo-container img {
-  display: inline-block;
-  /* or block */
-  vertical-align: middle;
-  transform: scale(1.1);
-  text-decoration: underline;
-  max-height: 20px;
-  margin: 4px;
-  /* optional spacing */
+.contact-info .smaller-text {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
 }
 
+.lowered-contact {
+  margin-top: 3rem; /* Adjust this value as needed */
+}
+
+/* === SUB PAGE IMAGES === */
 #vanilla-ice-cone-img {
 
 
@@ -402,20 +421,17 @@ body.aero-page {
 }
 
 .robot-img {
-  max-width: clamp(60px, 20vw, 120px);
-  max-height: clamp(60px, 20vh, 120px);
+  max-width: clamp(60px, 24vw, 120px);
+  max-height: clamp(60px, 24vh, 120px);
   width: auto;
   height: auto;
-  top: -116px;    /* 20px above the top edge of .ml-wrapper */
-  left: 30px;  /* 30px outside the right edge of .ml-wrapper */
+  top: calc(0vh - 110px); /* calc(49vh - 102px)  calc(10vh - 175px)*/
+  /* top: 20vh;  -111px;    20px above the top edge of .ml-wrapper */
+  left: 3vw; /* 33px;   30px outside the right edge of .ml-wrapper */
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
   position: absolute;
-}
-
-.ml-wrapper {
-  position: relative;
 }
 
 #airplane-drawing-img {
@@ -442,16 +458,10 @@ body.aero-page {
   position: absolute;
 }
 
-.logo-container img {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
 
-.logo-container img.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+
+
+
 
 
 
@@ -591,28 +601,11 @@ body.aero-page {
     /* still aligns logos to the right inside container */
   }
 
-  .ml-title {
-    top: 46%;
-  }
-
-  .robot-img {
-    top: -28%; /* -102px;   20px above the top edge of .ml-wrapper */
-    left: 18px;  /* 30px outside the right edge of .ml-wrapper */
-  }
-
-  .top-links {
-    top: 10%;
-  }
 }
 
 /* Allow horizontal scroll ONLY on very small screens */
 @media (max-width: 359px) {
   body {
     overflow-x: auto;
-  }
-
-  .robot-img {
-    top: -80px;    /* 20px above the top edge of .ml-wrapper */
-    left: 70vw;  /* 30px outside the right edge of .ml-wrapper */
   }
 }
