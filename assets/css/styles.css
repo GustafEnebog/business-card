@@ -320,33 +320,18 @@ body.aero-page {
   /* margin: 0 auto; */
 }
 
+
 /* === SUBPAGE NAV === */
-
 .subpage-nav {
-  position: relative;
-
   width: 100%;
   font-size: 1rem;
   font-weight: 300;
   margin-top: 3rem;
-}
 
-.subpage-nav a {
-  text-decoration: none;
-  color: black;
-  font-weight: 300;
-  flex: 1 1 45%;
-}
-
-.subpage-nav .left-link {
-  position: absolute;
-  left: 0;
-
-}
-
-.subpage-nav .right-link {
-  position: absolute;
-  right: 0;
+  display: flex;
+  justify-content: space-between; /* This spaces the two links left and right */
+  gap: 1rem; /* Optional spacing between links on smaller screens */
+  flex-wrap: wrap; /* Optional: allows wrapping on small screens */
 }
 
 .subpage-nav a {
@@ -354,6 +339,18 @@ body.aero-page {
   border-radius: 4px;
   text-decoration: none;
   color: black;
+  font-weight: 300;
+  flex: 1 1 45%; /* Optional: makes links responsive */
+  text-align: center;
+}
+
+/* These are now just class markers, no positioning needed */
+.subpage-nav .left-link {
+  text-align: left;
+}
+
+.subpage-nav .right-link {
+  text-align: right;
 }
 
 .ml-page .subpage-nav a:hover:nth-child(1) {
@@ -423,7 +420,7 @@ body.aero-page {
   /* padding: 1rem 0;*/
   text-align: center;
   width: 100%;
-  margin-top: 12vh;
+  margin-top: 2vh;
 }
 
 .contact-info .smaller-text {
@@ -700,6 +697,13 @@ body.aero-page {
     position: relative;
     margin-top: 15vh;
   }
+
+  .subpage-nav {
+    position: relative;
+    padding-bottom: 60px;
+    /* Height of .bottom-links */
+  }
+
 }
 
 /* Allow horizontal scroll ONLY on very small screens */
