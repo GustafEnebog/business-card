@@ -420,7 +420,7 @@ body.aero-page {
   /* padding: 1rem 0;*/
   text-align: center;
   width: 100%;
-  margin-top: 2vh;
+  margin-top: 1vh;
 }
 
 .contact-info .smaller-text {
@@ -695,13 +695,7 @@ body.aero-page {
     /* padding-top: 100px;
     display: block; */
     position: relative;
-    margin-top: 15vh;
-  }
-
-  .subpage-nav {
-    position: relative;
-    padding-bottom: 60px;
-    /* Height of .bottom-links */
+    margin-top: 13vh;
   }
 
 }
