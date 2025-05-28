@@ -22,7 +22,8 @@ body {
   position: relative;
 }
 
-/===TOP * LINKS===*/ .top-links {
+/* ===TOP LINKS===*/ 
+.top-links {
   position: absolute;
   top: 15%;
   display: flex;
@@ -52,6 +53,7 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
 
 /* === MAIN TITLE AREA === */
 .main-title-wrapper {
@@ -213,7 +215,7 @@ body.aero-page {
 /*=== TOP LINKS === */
 #sub-page-top-links {
   /* position: absolute;*/
-  top: 15%;
+  top: -15%;
   display: flex;
   gap: 4vw;
   justify-content: center;
@@ -638,7 +640,6 @@ body.aero-page {
     position: sticky;
     top: 0;
     z-index: 1;
-    background: white;
     /* or your page background */
   }
 
@@ -672,8 +673,8 @@ body.aero-page {
   .ml-title,
   .ml-description,
   .logo-container {
-    width: 90vw;
-    max-width: 90vw;
+    width: 85vw;
+    max-width: 85vw;
   }
 
   .ml-description {
@@ -687,9 +688,9 @@ body.aero-page {
     /* still aligns logos to the right inside container */
   }
 
-  body {
+  /* body {
     border: 5px solid red;
-  }
+  } */
 
   .ml-wrapper {
     /* padding-top: 100px;
