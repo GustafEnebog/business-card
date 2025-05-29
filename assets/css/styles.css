@@ -22,7 +22,7 @@ body {
   position: relative;
 }
 
-/* ===TOP LINKS===*/ 
+/* ===TOP LINKS===*/
 .top-links {
   position: absolute;
   top: 15%;
@@ -156,8 +156,8 @@ body {
   max-height: 25vh;
   margin-top: 0;
   opacity: 0;
-  transition: opacity 1s ease;S
-  z-index: 10;
+  transition: opacity 1s ease;
+  S z-index: 10;
 }
 
 /* =============== SUB PAGES ============ */
@@ -332,9 +332,12 @@ body.aero-page {
   margin-top: 3rem;
 
   display: flex;
-  justify-content: space-between; /* This spaces the two links left and right */
-  gap: 1rem; /* Optional spacing between links on smaller screens */
-  flex-wrap: wrap; /* Optional: allows wrapping on small screens */
+  justify-content: space-between;
+  /* This spaces the two links left and right */
+  gap: 1rem;
+  /* Optional spacing between links on smaller screens */
+  flex-wrap: wrap;
+  /* Optional: allows wrapping on small screens */
 }
 
 .subpage-nav a {
@@ -343,7 +346,8 @@ body.aero-page {
   text-decoration: none;
   color: black;
   font-weight: 300;
-  flex: 1 1 45%; /* Optional: makes links responsive */
+  flex: 1 1 45%;
+  /* Optional: makes links responsive */
   text-align: center;
 }
 
@@ -607,12 +611,12 @@ body.aero-page {
   } */
 
   /* === SPEECH BUBBLE === */
-#ml-bubble-img {
-  position: absolute;
-  top: 22%;
-  left: 55vw;
-  transform: translateX(-50%);
-}
+  #ml-bubble-img {
+    position: absolute;
+    top: 22%;
+    left: 55vw;
+    transform: translateX(-50%);
+  }
 
   .logo-container img {
     max-height: 16px;
@@ -670,16 +674,16 @@ body.aero-page {
     /* Center the container */
   }
 
-    .bottom-links {
+  .bottom-links {
     top: 75%;
   }
 
   #ml-bubble-img {
-  position: absolute;
-  top: 18%;
-  left: 53vw;
-  transform: translateX(-50%);
-}
+    position: absolute;
+    top: 18%;
+    left: 53vw;
+    transform: translateX(-50%);
+  }
 
   .ml-wrapper {
     display: flex;
@@ -716,11 +720,25 @@ body.aero-page {
     margin-top: 13vh;
   }
 
+  .bottom-links {
+    top: 70%;
+    gap: 0.7em;
+  }
+
 }
 
 /* Allow horizontal scroll ONLY on very small screens */
 @media (max-width: 359px) {
   body {
     overflow-x: auto;
+  }
+}
+
+
+/* Allow horizontal scroll ONLY on very small screens */
+@media (max-height: 420px) {
+  .bottom-links {
+    top: 75%;
+    row-gap: 0.3em;
   }
 }
