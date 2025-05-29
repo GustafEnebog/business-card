@@ -150,12 +150,13 @@ body {
 /* === SPEECH BUBBLE === */
 #ml-bubble-img {
   position: absolute;
-  top: 20%;
-  right: 15%;
+  top: 22%;
+  left: 75vw;
+  transform: translateX(-50%);
   max-height: 25vh;
   margin-top: 0;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 1s ease;S
   z-index: 10;
 }
 
@@ -542,7 +543,7 @@ body.aero-page {
     justify-content: center;
     column-gap: 5vw;
     row-gap: 0.8em;
-    bottom: 10%;
+    bottom: 14%;
   }
 
   .main-title-container {
@@ -558,7 +559,7 @@ body.aero-page {
     justify-content: center;
     column-gap: 5vw;
     row-gap: 0.8em;
-    bottom: 10%;
+    bottom: 14%;
   }
 
   .main-title-container {
@@ -574,9 +575,11 @@ body.aero-page {
     margin-right: auto;
   }
 
+  /*
   .ml-title {
     top: 42%;
   }
+  */
 }
 
 
@@ -585,23 +588,31 @@ body.aero-page {
     top: 15%;
   }
 
-  .main-title-wrapper,
+  /* .main-title-wrapper,
   .main-title-container {
     margin-top: -20vh;
-  }
+  } */
 
   .bottom-links {
-    top: 60%;
+    top: 70%;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
     gap: 0.7em;
   }
 
-  #ml-bubble-img {
+  /* #ml-bubble-img {
     top: 36%;
     right: 10%;
-  }
+  } */
+
+  /* === SPEECH BUBBLE === */
+#ml-bubble-img {
+  position: absolute;
+  top: 22%;
+  left: 55vw;
+  transform: translateX(-50%);
+}
 
   .logo-container img {
     max-height: 16px;
@@ -643,11 +654,6 @@ body.aero-page {
     /* or your page background */
   }
 
-  .main-title-wrapper {
-    position: sticky;
-    top: 0;
-  }
-
 }
 
 
@@ -663,6 +669,17 @@ body.aero-page {
     margin: 0 auto;
     /* Center the container */
   }
+
+    .bottom-links {
+    top: 75%;
+  }
+
+  #ml-bubble-img {
+  position: absolute;
+  top: 18%;
+  left: 53vw;
+  transform: translateX(-50%);
+}
 
   .ml-wrapper {
     display: flex;
