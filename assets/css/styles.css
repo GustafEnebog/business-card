@@ -468,18 +468,20 @@ body.aero-page {
 }
 
 .robot-img {
-  max-width: clamp(60px, 24vw, 120px);
-  max-height: clamp(60px, 24vh, 120px);
+  max-width: clamp(90px, 25vw, 120px);
+  max-height: clamp(90px, 25vh, 120px);
   width: auto;
   height: auto;
-  top: calc(0vh - 66px);
-  top: -20vh;
+  top: calc(0vh - 110px);
+  /* calc(0vh - 66px); */
+  /* top: -20vh; */
+  top: -110px;
   /* calc(49vh - 102px)  calc(10vh - 175px)*/
   /* top: 20vh;  -111px;    20px above the top edge of .ml-wrapper */
-  left: 17%;
+  left: 5%;
   /* 33px;   30px outside the right edge of .ml-wrapper */
-  transform: translateX(-50%);
-  max-height: 25vh;
+  /* transform: translateX(-50%); */
+  /* max-height: 25vh; */
   margin-top: 0;
 
   opacity: 0;
@@ -663,8 +665,13 @@ body.aero-page {
     /* or your page background */
   }
 
+      .ml-wrapper {
+    margin-top: 15vh;
+  }
+
 }
 
+}
 
 @media (max-width: 420px) {
   .main-title-container {
@@ -736,6 +743,7 @@ body.aero-page {
 @media (max-width: 359px) {
   body {
     overflow-x: auto;
+    /* margin-top: 15vh; */
   }
 }
 
@@ -750,7 +758,13 @@ body.aero-page {
 
 /* Allow horizontal scroll ONLY on very small screens */
 @media (max-height: 576px) {
-.ml-wrapper {
+  .ml-wrapper {
     margin-top: 15vh;
+  }
 }
-}
+
+@media (max-height: 475px) {
+  .robot-img {
+    /* top: calc(-23vh - 10px); /* calc(0vh - 66px); */
+    top: -23vh;
+  }
