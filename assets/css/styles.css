@@ -473,10 +473,15 @@ body.aero-page {
   width: auto;
   height: auto;
   top: calc(0vh - 66px);
+  top: -20vh;
   /* calc(49vh - 102px)  calc(10vh - 175px)*/
   /* top: 20vh;  -111px;    20px above the top edge of .ml-wrapper */
-  left: 3.5vw;
+  left: 17%;
   /* 33px;   30px outside the right edge of .ml-wrapper */
+  transform: translateX(-50%);
+  max-height: 25vh;
+  margin-top: 0;
+
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
@@ -741,4 +746,11 @@ body.aero-page {
     top: 75%;
     row-gap: 0.3em;
   }
+}
+
+/* Allow horizontal scroll ONLY on very small screens */
+@media (max-height: 576px) {
+.ml-wrapper {
+    margin-top: 15vh;
+}
 }
