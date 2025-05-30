@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // === Logo marching animation ===
-    const logos = document.querySelectorAll('.logo-container img');
+    const logos = Array.from(document.querySelectorAll('.logo-container img')).reverse();
     const initialDelay = 1000; // Delay before the first logo appears
     const logoDelay = 120; // Delay between each logo
 
