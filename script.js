@@ -99,17 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (isLandingPage) {
     // Preload speech bubble and logos for smooth appearance
     preloadImages([
-      'assets/images/speech-bubble-landing-page.png',
-      'assets/images/logo1.png',
-      'assets/images/logo2.png',
-      'assets/images/logo3.png',
-      'assets/images/logo4.png',
-      'assets/images/logo5.png',
-      'assets/images/logo6.png',
-      'assets/images/logo7.png',
-      'assets/images/logo8.png',
-      'assets/images/logo9.png',
-      'assets/images/logo10.png'
+      'assets/images/speech-bubble-landing-page.png'
     ]);
 
     const showLinks = () => {
