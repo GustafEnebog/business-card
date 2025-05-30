@@ -148,7 +148,7 @@ body {
 
 
 /* === SPEECH BUBBLE === */
-#ml-bubble-img {
+#bubble-img {
   position: absolute;
   top: 22%;
   left: 75vw;
@@ -468,14 +468,14 @@ body.aero-page {
 }
 
 .robot-img {
-  max-width: clamp(90px, 25vw, 120px);
-  max-height: clamp(90px, 25vh, 120px);
+  max-width: clamp(90px, 28vw, 150px);
+  max-height: clamp(90px, 28vh, 150px);
   width: auto;
   height: auto;
   top: calc(0vh - 110px);
   /* calc(0vh - 66px); */
   /* top: -20vh; */
-  top: -110px;
+  top: -135px;
   /* calc(49vh - 102px)  calc(10vh - 175px)*/
   /* top: 20vh;  -111px;    20px above the top edge of .ml-wrapper */
   left: 5%;
@@ -612,13 +612,13 @@ body.aero-page {
     gap: 0.7em;
   }
 
-  /* #ml-bubble-img {
+  /* #bubble-img {
     top: 36%;
     right: 10%;
   } */
 
   /* === SPEECH BUBBLE === */
-  #ml-bubble-img {
+  #bubble-img {
     position: absolute;
     top: 22%;
     left: 55vw;
@@ -714,11 +714,16 @@ body.aero-page {
     top: 75%;
   }
 
-  #ml-bubble-img {
+  #bubble-img {
     position: absolute;
     top: 18%;
     left: 53vw;
     transform: translateX(-50%);
+  }
+
+      .robot-img {
+    /* top: calc(-23vh - 10px); /* calc(0vh - 66px); */
+    top: -10vh;
   }
 
   .ml-wrapper {
@@ -761,6 +766,11 @@ body.aero-page {
     gap: 0.7em;
   }
 
+    .robot-img {
+    /* top: calc(-23vh - 10px); /* calc(0vh - 66px); */
+    top: -100vh;
+  }
+
 }
 
 /* Allow horizontal scroll ONLY on very small screens */
@@ -778,6 +788,7 @@ body.aero-page {
     top: 75%;
     row-gap: 0.3em;
   }
+
 }
 
 /* Allow horizontal scroll ONLY on very small screens */
@@ -790,5 +801,5 @@ body.aero-page {
 @media (max-height: 475px) {
   .robot-img {
     /* top: calc(-23vh - 10px); /* calc(0vh - 66px); */
-    top: -23vh;
+    top: -19vh;
   }

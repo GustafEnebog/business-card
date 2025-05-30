@@ -111,11 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       if (!linkClicked) {
         const wrapper = document.querySelector('.main-title-wrapper');
-        if (wrapper && !document.getElementById('ml-bubble-img')) {
+        if (wrapper && !document.getElementById('bubble-img')) {
           const img = document.createElement('img');
           img.src = 'assets/images/speech-bubble-landing-page.png';
           img.alt = 'Machine Learning Collage';
-          img.id = 'ml-bubble-img';
+          img.id = 'bubble-img';
           img.style.opacity = '0';
           wrapper.appendChild(img);
 
