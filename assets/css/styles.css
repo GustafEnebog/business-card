@@ -69,7 +69,7 @@ body {
   align-items: flex-end;
   justify-content: center;
   gap: 1.3em;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   width: clamp(90%, 33vw, 100%);
   text-align: center;
 }
@@ -674,6 +674,13 @@ body.aero-page {
 }
 
 @media (max-width: 420px) {
+
+    body {
+    background: red; /* test style */
+  }
+
+
+
   .main-title-container {
     flex-direction: column;
     gap: 0;
@@ -684,6 +691,23 @@ body.aero-page {
     /* Ensure it doesn't exceed the viewport */
     margin: 0 auto;
     /* Center the container */
+    flex-wrap: wrap;       /* enable wrapping */
+    justify-content: center;
+    white-space: normal;   /* allow line breaks */
+    flex-direction: column;   /* stack vertically */
+    align-items: center;
+    gap: 0.2em;
+    flex-wrap: nowrap;        /* not needed when stacking, but safe */
+    width: 90vw;
+    margin: 0 auto;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+    width: 90vw;
+    max-width: 90vw;
+    margin: 0 auto;
+    white-space: normal;
   }
 
   .bottom-links {
