@@ -1,4 +1,7 @@
-/* === RESET & BASE STYLES === */
+/*====================================================
+   🌐 GLOBAL RESET & BASE STYLES
+====================================================*/
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +25,13 @@ body {
   position: relative;
 }
 
-/* ===TOP LINKS===*/
+/*====================================================
+   🏠 LANDING PAGE STYLES
+====================================================*/
+
+/* ====================================================
+   LANDING PAGE - TOP LINKS
+==================================================== */
 .top-links {
   position: absolute;
   top: 15%;
@@ -54,8 +63,9 @@ body {
   visibility: visible;
 }
 
-
-/* === MAIN TITLE AREA === */
+/* ====================================================
+   LANDING PAGE - MAIN TITLE
+==================================================== */
 .main-title-wrapper {
   flex-grow: 1;
   display: flex;
@@ -88,7 +98,9 @@ body {
   line-height: 1;
 }
 
-/* === BOTTOM LINKS === */
+/* ====================================================
+   LANDING PAGE - BOTTOM LINKS
+==================================================== */
 .bottom-links {
   position: absolute;
   bottom: 15%;
@@ -112,8 +124,7 @@ body {
   transition: opacity 2s ease, color 0.3s ease;
 }
 
-/* --- BOTTOM LINK HOVER GLOW EFFECTS --- */
-
+/* === LANDING PAGE - GLOW EFFECTS === */
 .bottom-links a:hover:nth-child(1) {
   text-shadow:
     0 0 4px #f752ff,
@@ -144,10 +155,9 @@ body {
     0 0 40px #00d9ff;
 }
 
-
-
-
-/* === SPEECH BUBBLE === */
+/* ====================================================
+   LANDING PAGE - IMAGE
+==================================================== */
 #bubble-img {
   position: absolute;
   top: 22%;
@@ -160,7 +170,13 @@ body {
   S z-index: 10;
 }
 
-/* =============== SUB PAGES ============ */
+/*====================================================
+   📄 SUBPAGE STYLES
+====================================================*/
+
+/* ====================================================
+   SUBPAGE - GENERAL LAYOUT
+==================================================== */
 body.sub-page {
   padding: 40px 20px;
 }
@@ -177,12 +193,13 @@ body.aero-page {
   background: linear-gradient(to bottom, #00d9ff 0%, #78e4ff 50%, #00d9ff 100%);
 }
 
-/* === ML WRAPPER === */
 .ml-wrapper {
   position: relative;
 }
 
-/* === BACK ARROW === */
+/* ====================================================
+   SUBPAGE - BACK ARROW
+==================================================== */
 .back-arrow {
   position: absolute;
   top: 20px;
@@ -208,12 +225,9 @@ body.aero-page {
   text-decoration: underline;
 }
 
-
-
-
-
-
-/*=== TOP LINKS === */
+/* ====================================================
+   SUBPAGE - TOP LINKS
+==================================================== */
 #sub-page-top-links {
   /* position: absolute;*/
   top: -15%;
@@ -246,19 +260,16 @@ body.aero-page {
   visibility: visible;
 }
 
-
-
-
-
-
-
-
-/* === ML TITLE === */
+/* ====================================================
+   SUBPAGE - TITLE
+==================================================== */
 .ml-title {
   margin-bottom: 15px;
 }
 
-/* === DESCRIPTION === */
+/* ====================================================
+   SUBPAGE - DESCRIPTION
+==================================================== */
 .ml-description {
   /* ensures children align left */
   text-align: left;
@@ -284,8 +295,9 @@ body.aero-page {
   cursor: pointer;
 }
 
-/* === LOGOS === */
-
+/* ====================================================
+   SUBPAGE - LOGOS
+==================================================== */
 .logo-container img.visible {
   opacity: 1;
   transform: translateY(0);
@@ -313,8 +325,9 @@ body.aero-page {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* === TOP LINKS, DESCRIPTION AND LOGOS === */
-
+/* ====================================================
+   SUBPAGE - LINKS, DESCRIPTION AND LOGOS
+==================================================== */
 .ml-title,
 .ml-description,
 .logo-container {
@@ -324,7 +337,9 @@ body.aero-page {
 }
 
 
-/* === SUBPAGE NAV === */
+/* ====================================================
+   SUBPAGE - NAVIGATION LINKS
+==================================================== */
 .subpage-nav {
   width: 100%;
   font-size: 1rem;
@@ -420,7 +435,9 @@ body.aero-page {
     0 0 40px #ffa300;
 }
 
-/* === CONTACT INFO === */
+/* ====================================================
+   SUBPAGE - CONTACT INFO
+==================================================== */
 .contact-info {
   display: flex;
   justify-content: center;
@@ -440,7 +457,9 @@ body.aero-page {
   /* Adjust this value as needed */
 }
 
-/* === SUB PAGE IMAGES === */
+/* ====================================================
+   SUBPAGE - IMAGEs
+==================================================== */
 #vanilla-ice-cone-img {
 
 
@@ -517,15 +536,21 @@ body.aero-page {
 }
 
 
-
-
-
-
-
-
-
-
-/* === MEDIA QUERIES === */
+/*====================================================
+   📱 MEDIA QUERIES
+   – Width: 
+     · Medium (max-width: 1024px)
+     · Medium-range (855px–880px)
+     · Small (769px–854px)
+     · Tablet (576px–768px)
+     · Mobile (max-width: 576px)
+     · Small Mobile (max-width: 420px)
+     · Very Small Mobile (max-width: 359px)
+   – Height:
+     · Short (max-height: 576px)
+     · Shorter (max-height: 475px)
+     · Very Short (max-height: 420px)
+==================================================== */
 
 /* Medium screens (tablets) */
 @media (max-width: 1024px) {
