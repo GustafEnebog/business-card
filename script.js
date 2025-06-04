@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { 
   const topLinks = document.querySelectorAll('.top-links a');
   const bottomLinks = document.querySelectorAll('.bottom-links a');
   const isLandingPage = document.body.classList.contains('landing-page');
@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let linkClicked = sessionStorage.getItem('linkClicked') === 'true';
 
-  // Track clicks on all links
   document.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       linkClicked = true;
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Function to preload images (improves smoothness of fades)
   function preloadImages(imageUrls) {
     imageUrls.forEach(src => {
       const img = new Image();
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const path = window.location.pathname;
 
     if (path.includes('ml.html')) {
-      // Preload images early
       preloadImages([
         '../assets/images/ml-robot-no-bubble.png',
         '../assets/images/robot.png'
@@ -41,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const imgWrapper = document.querySelector('.sub-page-wrapper');
         if (!imgWrapper) return;
 
-        // First image (no bubble)
         const firstImg = document.createElement('img');
         firstImg.src = '../assets/images/ml-robot-no-bubble.png';
         firstImg.alt = 'Robot No Bubble';
@@ -55,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
           firstImg.style.opacity = '1';
         }, 10);
 
-        // After 3 seconds, fade in second image (with bubble)
         setTimeout(() => {
           const secondImg = document.createElement('img');
           secondImg.src = '../assets/images/robot.png';
@@ -70,19 +65,39 @@ document.addEventListener("DOMContentLoaded", function () {
             secondImg.style.opacity = '1';
           }, 30);
 
-          // Remove first image after second fully visible
           setTimeout(() => {
             if (firstImg.parentElement) {
               imgWrapper.removeChild(firstImg);
             }
           }, 3000);
-
         }, 3000);
 
-      }, 6000); // Start sequence 6 seconds after page load
+      }, 6000); // ML robot animation start delay
     }
 
-    // Logo marching animation (reversed order as in your code)
+    // ✅ NEW: fullstack page logic
+    if (path.includes('fullstack.html')) {
+      preloadImages(['../assets/images/vanilla-ice.png']);
+
+      setTimeout(() => {
+        const imgWrapper = document.querySelector('.sub-page-wrapper');
+        if (!imgWrapper) return;
+
+        const iceImg = document.createElement('img');
+        iceImg.src = '../assets/images/vanilla-ice.png';
+        iceImg.alt = 'Vanilla Ice';
+        iceImg.classList.add('vanilla-ice-img'); // You can change this class if needed
+        iceImg.style.opacity = '0';
+        iceImg.style.transition = 'opacity 1s ease';
+
+        imgWrapper.appendChild(iceImg);
+
+        setTimeout(() => {
+          iceImg.style.opacity = '1';
+        }, 10);
+      }, 6000); // Delay before vanilla-ice appears
+    }
+
     const logos = Array.from(document.querySelectorAll('.logo-container img')).reverse();
     const initialDelay = 1000;
     const logoDelay = 120;
@@ -97,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (isLandingPage) {
-    // Preload speech bubble and logos for smooth appearance
     preloadImages([
       'assets/images/speech-bubble-landing-page.png'
     ]);
@@ -113,12 +127,10 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(showLinks, 2000);
     }
 
-    // Reset cameFromSubpage flag soon after load
     setTimeout(() => {
       sessionStorage.setItem('cameFromSubpage', 'false');
     }, 100);
 
-    // Show speech bubble 10 seconds after load, if no link clicked
     setTimeout(() => {
       if (!linkClicked) {
         const wrapper = document.querySelector('.main-title-wrapper');

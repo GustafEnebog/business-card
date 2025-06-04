@@ -355,7 +355,7 @@ body.aero-page {
   text-align: right;
 }
 
-.sub-page-page .subpage-nav a:hover:nth-child(1) {
+.ml-page .subpage-nav a:hover:nth-child(1) {
   text-shadow:
     0 0 4px #f752ff,
     0 0 8px #f752ff,
@@ -365,7 +365,7 @@ body.aero-page {
     0 0 40px #f752ff;
 }
 
-.sub-page-page .subpage-nav a:hover:nth-child(2) {
+.ml-page .subpage-nav a:hover:nth-child(2) {
   text-shadow:
     0 0 4px #00d9ff,
     0 0 8px #00d9ff,
@@ -436,13 +436,14 @@ body.aero-page {
 /* ====================================================
    SUBPAGE - IMAGEs
 ==================================================== */
-#vanilla-ice-cone-img {
-  max-width: clamp(45px, 12vw, 70px);
-  max-height: clamp(60px, 20vh, 100px);
+.vanilla-ice-img {
+  max-width: clamp(90px, 28vw, 150px);
+  max-height: clamp(90px, 28vh, 150px);
   width: auto;
   height: auto;
-  top: 20%;
-  right: 60%;
+  top: -140px;
+  left: 5%;
+  margin-top: 0;
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
@@ -454,7 +455,6 @@ body.aero-page {
   max-height: clamp(90px, 28vh, 150px);
   width: auto;
   height: auto;
-  top: calc(0vh - 110px);
   top: -135px;
   left: 5%;
   margin-top: 0;
@@ -464,13 +464,14 @@ body.aero-page {
   position: absolute;
 }
 
-#airplane-drawing-img {
-  max-width: clamp(45px, 12vw, 70px);
-  max-height: clamp(60px, 20vh, 100px);
+.airplane-img {
+  max-width: clamp(90px, 28vw, 150px);
+  max-height: clamp(90px, 28vh, 150px);
   width: auto;
   height: auto;
-  top: 20%;
-  right: 60%;
+  top: -135px;
+  left: 5%;
+  margin-top: 0;
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
