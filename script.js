@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ]);
 
       setTimeout(() => {
-        const imgWrapper = document.querySelector('.ml-wrapper');
+        const imgWrapper = document.querySelector('.sub-page-wrapper');
         if (!imgWrapper) return;
 
         // First image (no bubble)

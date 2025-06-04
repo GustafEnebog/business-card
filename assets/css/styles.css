@@ -167,7 +167,7 @@ body {
   margin-top: 0;
   opacity: 0;
   transition: opacity 1s ease;
-  S z-index: 10;
+  z-index: 10;
 }
 
 /*====================================================
@@ -185,7 +185,7 @@ body.fullstack-page {
   background: linear-gradient(to bottom, #f752ff 0%, #fc8bff 50%, #f752ff 100%);
 }
 
-body.ml-page {
+body.sub-page-page {
   background: linear-gradient(to bottom, #ffa300 0%, #ffae1a 50%, #ffa300 100%);
 }
 
@@ -193,7 +193,7 @@ body.aero-page {
   background: linear-gradient(to bottom, #00d9ff 0%, #78e4ff 50%, #00d9ff 100%);
 }
 
-.ml-wrapper {
+.sub-page-wrapper {
   position: relative;
 }
 
@@ -263,14 +263,14 @@ body.aero-page {
 /* ====================================================
    SUBPAGE - TITLE
 ==================================================== */
-.ml-title {
+.sub-page-title {
   margin-bottom: 15px;
 }
 
 /* ====================================================
    SUBPAGE - DESCRIPTION
 ==================================================== */
-.ml-description {
+.sub-page-description {
   /* ensures children align left */
   text-align: left;
   /* ensures multi-line text inside children aligns left */
@@ -328,8 +328,8 @@ body.aero-page {
 /* ====================================================
    SUBPAGE - LINKS, DESCRIPTION AND LOGOS
 ==================================================== */
-.ml-title,
-.ml-description,
+.sub-page-title,
+.sub-page-description,
 .logo-container {
   width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
   max-width: 90vw;
@@ -375,7 +375,7 @@ body.aero-page {
   text-align: right;
 }
 
-.ml-page .subpage-nav a:hover:nth-child(1) {
+.sub-page-page .subpage-nav a:hover:nth-child(1) {
   text-shadow:
     0 0 4px #f752ff,
     0 0 8px #f752ff,
@@ -385,7 +385,7 @@ body.aero-page {
     0 0 40px #f752ff;
 }
 
-.ml-page .subpage-nav a:hover:nth-child(2) {
+.sub-page-page .subpage-nav a:hover:nth-child(2) {
   text-shadow:
     0 0 4px #00d9ff,
     0 0 8px #00d9ff,
@@ -496,9 +496,9 @@ body.aero-page {
   /* top: -20vh; */
   top: -135px;
   /* calc(49vh - 102px)  calc(10vh - 175px)*/
-  /* top: 20vh;  -111px;    20px above the top edge of .ml-wrapper */
+  /* top: 20vh;  -111px;    20px above the top edge of .sub-page-wrapper */
   left: 5%;
-  /* 33px;   30px outside the right edge of .ml-wrapper */
+  /* 33px;   30px outside the right edge of .sub-page-wrapper */
   /* transform: translateX(-50%); */
   /* max-height: 25vh; */
   margin-top: 0;
@@ -554,7 +554,7 @@ body.aero-page {
 
 /* Medium screens (tablets) */
 @media (max-width: 1024px) {
-  .ml-title {
+  .sub-page-title {
     top: 38%;
   }
 }
@@ -602,8 +602,8 @@ body.aero-page {
     margin-top: -2vh;
   }
 
-  .ml-title,
-  .ml-description,
+  .sub-page-title,
+  .sub-page-description,
   .logo-container {
     width: 80vw;
     max-width: 80vw;
@@ -612,7 +612,7 @@ body.aero-page {
   }
 
   /*
-  .ml-title {
+  .sub-page-title {
     top: 42%;
   }
   */
@@ -690,7 +690,7 @@ body.aero-page {
     /* or your page background */
   }
 
-  .ml-wrapper {
+  .sub-page-wrapper {
     margin-top: 15vh;
   }
 
@@ -754,20 +754,20 @@ body.aero-page {
     top: -10vh;
   }
 
-  .ml-wrapper {
+  .sub-page-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .ml-title,
-  .ml-description,
+  .sub-page-title,
+  .sub-page-description,
   .logo-container {
     width: 85vw;
     max-width: 85vw;
   }
 
-  .ml-description {
+  .sub-page-description {
     display: block;
     text-align: left;
     /* Optional: for alignment inside */
@@ -782,7 +782,7 @@ body.aero-page {
     border: 5px solid red;
   } */
 
-  .ml-wrapper {
+  .sub-page-wrapper {
     /* padding-top: 100px;
     display: block; */
     position: relative;
@@ -833,7 +833,7 @@ body.aero-page {
 
 /* Allow horizontal scroll ONLY on very small screens */
 @media (max-height: 576px) {
-  .ml-wrapper {
+  .sub-page-wrapper {
     margin-top: 15vh;
   }
 }
