@@ -11,10 +11,8 @@
 body {
   font-family: 'Figtree', 'Montserrat', sans-serif;
   min-height: 100dvh;
-  /* modern browsers support this better */
   height: auto;
   background: linear-gradient(to bottom, #a6a49d 0%, #c9c7c0 12.5%, #c9c7c0 87.5%, #a6a49d 100%);
-
   color: black;
   display: flex;
   flex-direction: column;
@@ -79,7 +77,6 @@ body {
   align-items: flex-end;
   justify-content: center;
   gap: 1.3em;
-  /* white-space: nowrap; */
   width: clamp(90%, 33vw, 100%);
   text-align: center;
 }
@@ -229,7 +226,7 @@ body.aero-page {
    SUBPAGE - TOP LINKS
 ==================================================== */
 #sub-page-top-links {
-  /* position: absolute;*/
+  position: absolute;
   top: -15%;
   display: flex;
   gap: 4vw;
@@ -271,27 +268,21 @@ body.aero-page {
    SUBPAGE - DESCRIPTION
 ==================================================== */
 .sub-page-description {
-  /* ensures children align left */
   text-align: left;
-  /* ensures multi-line text inside children aligns left */
-  /* border: 2px solid orange; */
   margin-bottom: 1rem;
 }
 
 /* === LINK TO EXTRERNAL STUFF LIKE AIRPLANE PREDICTOR FOR EXAMPLE === */
 .custom-link {
   color: inherit;
-  /* Keeps it the same color as the surrounding text */
   font-weight: bold;
   text-decoration: none;
   border-bottom: 2px solid transparent;
-  /* For a smoother underline effect */
   transition: border-color 0.2s ease;
 }
 
 .custom-link:hover {
   border-color: currentColor;
-  /* Underline with same color as text on hover */
   cursor: pointer;
 }
 
@@ -308,8 +299,6 @@ body.aero-page {
   flex-wrap: wrap;
   gap: 8px;
   justify-content: flex-end;
-  /* flex-start; */
-  /* ← aligns logos to the right */
   align-items: center;
   width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
 }
@@ -333,9 +322,7 @@ body.aero-page {
 .logo-container {
   width: clamp(50vw, calc(90vw - 400 * ((100vw - 576px) / 424)), 90vw);
   max-width: 90vw;
-  /* margin: 0 auto; */
 }
-
 
 /* ====================================================
    SUBPAGE - NAVIGATION LINKS
@@ -345,14 +332,9 @@ body.aero-page {
   font-size: 1rem;
   font-weight: 300;
   margin-top: 3rem;
-
   display: flex;
-  justify-content: space-between;
-  /* This spaces the two links left and right */
   gap: 1rem;
-  /* Optional spacing between links on smaller screens */
   flex-wrap: wrap;
-  /* Optional: allows wrapping on small screens */
 }
 
 .subpage-nav a {
@@ -362,11 +344,9 @@ body.aero-page {
   color: black;
   font-weight: 300;
   flex: 1 1 45%;
-  /* Optional: makes links responsive */
   text-align: center;
 }
 
-/* These are now just class markers, no positioning needed */
 .subpage-nav .left-link {
   text-align: left;
 }
@@ -441,7 +421,6 @@ body.aero-page {
 .contact-info {
   display: flex;
   justify-content: center;
-  /* padding: 1rem 0;*/
   text-align: center;
   width: 100%;
   margin-top: 1vh;
@@ -453,33 +432,17 @@ body.aero-page {
   line-height: 1.4;
 }
 
-.lowered-contact {
-  /* Adjust this value as needed */
-}
 
 /* ====================================================
    SUBPAGE - IMAGEs
 ==================================================== */
 #vanilla-ice-cone-img {
-
-
   max-width: clamp(45px, 12vw, 70px);
-  /* Even smaller max width and earlier shrink */
   max-height: clamp(60px, 20vh, 100px);
-  /* Smaller and starts shrinking sooner */
   width: auto;
   height: auto;
-
-  /*height: auto;
-  height: clamp(60px, 20vh, 160px);
-  width: auto;
-  height: clamp(60px, 20vh, 160px); min, preferred, max height
-  position: absolute;
-  height: clamp(80px, 20vh, 180px);
-  position: absolute; */
   top: 20%;
   right: 60%;
-
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
@@ -492,17 +455,9 @@ body.aero-page {
   width: auto;
   height: auto;
   top: calc(0vh - 110px);
-  /* calc(0vh - 66px); */
-  /* top: -20vh; */
   top: -135px;
-  /* calc(49vh - 102px)  calc(10vh - 175px)*/
-  /* top: 20vh;  -111px;    20px above the top edge of .sub-page-wrapper */
   left: 5%;
-  /* 33px;   30px outside the right edge of .sub-page-wrapper */
-  /* transform: translateX(-50%); */
-  /* max-height: 25vh; */
   margin-top: 0;
-
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
@@ -510,25 +465,12 @@ body.aero-page {
 }
 
 #airplane-drawing-img {
-
-
   max-width: clamp(45px, 12vw, 70px);
-  /* Even smaller max width and earlier shrink */
   max-height: clamp(60px, 20vh, 100px);
-  /* Smaller and starts shrinking sooner */
   width: auto;
   height: auto;
-
-  /*height: auto;
-  height: clamp(60px, 20vh, 160px);
-  width: auto;
-  height: clamp(60px, 20vh, 160px); min, preferred, max height
-  position: absolute;
-  height: clamp(80px, 20vh, 180px);
-  position: absolute; */
   top: 20%;
   right: 60%;
-
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
@@ -568,7 +510,6 @@ body.aero-page {
     column-gap: 5vw;
     row-gap: 0.8em;
   }
-
 }
 
 /* Small screens: 769px–854px */
@@ -610,24 +551,12 @@ body.aero-page {
     margin-left: auto;
     margin-right: auto;
   }
-
-  /*
-  .sub-page-title {
-    top: 42%;
-  }
-  */
 }
-
 
 @media (max-width: 576px) {
   .top-links {
     top: 15%;
   }
-
-  /* .main-title-wrapper,
-  .main-title-container {
-    margin-top: -20vh;
-  } */
 
   .bottom-links {
     top: 70%;
@@ -636,11 +565,6 @@ body.aero-page {
     align-items: center;
     gap: 0.7em;
   }
-
-  /* #bubble-img {
-    top: 36%;
-    right: 10%;
-  } */
 
   /* === SPEECH BUBBLE === */
   #bubble-img {
@@ -658,20 +582,15 @@ body.aero-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Optional: centers the links */
     gap: 0.2rem;
-    /* Optional: adds spacing between links */
     position: relative;
-    /* To override any absolute positioning context */
     margin-top: 4rem;
   }
 
   .subpage-nav .left-link,
   .subpage-nav .right-link {
     position: static;
-    /* Removes absolute positioning */
     width: auto;
-    /* Optional: reset any width settings */
   }
 
   .contact-info {
@@ -687,7 +606,6 @@ body.aero-page {
     position: sticky;
     top: 0;
     z-index: 1;
-    /* or your page background */
   }
 
   .sub-page-wrapper {
@@ -696,39 +614,27 @@ body.aero-page {
 
 }
 
-
-
 @media (max-width: 420px) {
-
   .top-links {
     margin-top: 4vh;
   }
-
 
   .main-title-container {
     flex-direction: column;
     gap: 0;
     align-items: center;
     width: 90vw;
-    /* Adjust width to ensure the container is responsive */
     max-width: 90vw;
-    /* Ensure it doesn't exceed the viewport */
     margin: 0 auto;
-    /* Center the container */
     flex-wrap: wrap;
-    /* enable wrapping */
     justify-content: center;
     white-space: normal;
-    /* allow line breaks */
     flex-direction: column;
-    /* stack vertically */
     align-items: center;
     gap: 0.2em;
     flex-wrap: nowrap;
-    /* not needed when stacking, but safe */
     width: 90vw;
     margin: 0 auto;
-
     flex-direction: column;
     align-items: center;
     gap: 0.2em;
@@ -750,7 +656,6 @@ body.aero-page {
   }
 
   .robot-img {
-    /* top: calc(-23vh - 10px); /* calc(0vh - 66px); */
     top: -10vh;
   }
 
@@ -770,21 +675,13 @@ body.aero-page {
   .sub-page-description {
     display: block;
     text-align: left;
-    /* Optional: for alignment inside */
   }
 
   .logo-container {
     justify-content: flex-end;
-    /* still aligns logos to the right inside container */
   }
 
-  /* body {
-    border: 5px solid red;
-  } */
-
   .sub-page-wrapper {
-    /* padding-top: 100px;
-    display: block; */
     position: relative;
     margin-top: 13vh;
   }
@@ -795,7 +692,6 @@ body.aero-page {
   }
 
   .robot-img {
-    /* top: calc(-23vh - 10px); /* calc(0vh - 66px); */
     top: -100vh;
   }
 
@@ -808,16 +704,13 @@ body.aero-page {
     margin: 0 auto;
     white-space: normal;
   }
-
 }
 
 /* Allow horizontal scroll ONLY on very small screens */
 @media (max-width: 359px) {
   body {
     overflow-x: auto;
-    /* margin-top: 15vh; */
   }
-
 }
 
 
@@ -828,7 +721,6 @@ body.aero-page {
     top: 75%;
     row-gap: 0.3em;
   }
-
 }
 
 /* Allow horizontal scroll ONLY on very small screens */
@@ -840,6 +732,5 @@ body.aero-page {
 
 @media (max-height: 475px) {
   .robot-img {
-    /* top: calc(-23vh - 10px); /* calc(0vh - 66px); */
     top: -19vh;
   }
